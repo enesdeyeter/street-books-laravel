@@ -6,14 +6,16 @@
         {{-- Copyright --}}
         <div class="text-dark order-2 order-md-1">
             <span class="text-muted font-weight-bold mr-2">{{ date("Y") }} &copy;</span>
-            <a href="https://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Keenthemes</a>
+            <a href="{{ url('home') }}" class="text-dark-75 text-hover-primary">
+                <img src="{{ asset('media/logos/logo-dark.svg') }}" alt="street-books-logo" style="width: 127px; opacity: .2">
+            </a>
+            {{--            <a href="" target="_blank" class="text-dark-75 text-hover-primary">StreetBooks</a>--}}
         </div>
 
         {{-- Nav --}}
         <div class="nav nav-dark order-1 order-md-2">
-            <a href="https://keenthemes.com/metronic" target="_blank" class="nav-link pr-3 pl-0">About</a>
-            <a href="https://keenthemes.com/metronic" target="_blank" class="nav-link px-3">Team</a>
-            <a href="https://keenthemes.com/metronic" target="_blank" class="nav-link pl-3 pr-0">Contact</a>
+            <a href="" target="_blank" class="nav-link pr-3 pl-0 disabled">enesdeyeter</a>
+            <a href="change-log" target="_blank" class="nav-link pr-3 pl-0">v1.6</a>
         </div>
     </div>
 </div>

@@ -6,11 +6,11 @@
         @if (config('layout.header.self.display'))
 
             @php
-                $kt_logo_image = 'logo-light.png';
+                $kt_logo_image = 'logo-dark.svg';
             @endphp
 
             @if (config('layout.header.self.theme') === 'light')
-                @php $kt_logo_image = 'logo-dark.png' @endphp
+                @php $kt_logo_image = 'logo-dark.svg' @endphp
             @elseif (config('layout.header.self.theme') === 'dark')
                 @php $kt_logo_image = 'logo-light.png' @endphp
             @endif
@@ -19,8 +19,8 @@
             <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
                 @if(config('layout.aside.self.display') == false)
                     <div class="header-logo">
-                        <a href="{{ url('/') }}">
-                            <img alt="Logo" src="{{ asset('media/logos/'.$kt_logo_image) }}"/>
+                        <a href="{{ url('/home') }}">
+                            <img alt="street-books-logo" src="{{ asset('media/logos/'.$kt_logo_image) }}" style="width: 180px"/>
                         </a>
                     </div>
                 @endif

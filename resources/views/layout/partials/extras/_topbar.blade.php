@@ -14,7 +14,7 @@
                 {{-- Toggle --}}
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <div class="btn btn-icon btn-clean btn-lg btn-dropdown mr-1">
-                       {{ Metronic::getSVG("media/svg/icons/General/Search.svg", "svg-icon-xl svg-icon-primary") }}
+                        {{ Metronic::getSVG("media/svg/icons/General/Search.svg", "svg-icon-xl svg-icon-primary") }}
                     </div>
                 </div>
 
@@ -58,11 +58,11 @@
     {{-- Quick Actions --}}
     @if (config('layout.extras.quick-actions.display'))
         @if (config('layout.extras.quick-actions.layout') == 'offcanvas'))
-            <div class="topbar-item">
-                <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_actions_toggle">
-                    {{ Metronic::getSVG("media/svg/icons/Media/Equalizer.svg", "svg-icon-xl svg-icon-primary") }}
-                </div>
+        <div class="topbar-item">
+            <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_actions_toggle">
+                {{ Metronic::getSVG("media/svg/icons/Media/Equalizer.svg", "svg-icon-xl svg-icon-primary") }}
             </div>
+        </div>
         @else
             <div class="dropdown">
                 {{-- Toggle --}}
@@ -84,7 +84,7 @@
     @if (config('layout.extras.cart.display'))
         <div class="dropdown">
             {{-- Toggle --}}
-            <div class="topbar-item"  data-toggle="dropdown" data-offset="10px,0px">
+            <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                 <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
                     {{ Metronic::getSVG("media/svg/icons/Shopping/Cart3.svg", "svg-icon-xl svg-icon-primary") }}
                 </div>
@@ -113,7 +113,8 @@
         <div class="dropdown">
             <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                 <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
-                    <img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}" alt=""/>
+                    <img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}"
+                         alt=""/>
                 </div>
             </div>
 
@@ -123,36 +124,94 @@
         </div>
     @endif
 
-    {{-- User --}}
-    @if (config('layout.extras.user.display'))
-        @if (config('layout.extras.user.layout') == 'offcanvas')
-            <div class="topbar-item">
-                <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
-                    <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                    <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
-                    <span class="symbol symbol-35 symbol-light-success">
-                        <span class="symbol-label font-size-h5 font-weight-bold">S</span>
-                    </span>
-                </div>
-            </div>
-        @else
-            <div class="dropdown">
-                {{-- Toggle --}}
-                <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
-                    <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
-                        <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                        <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
-                        <span class="symbol symbol-35 symbol-light-success">
-                            <span class="symbol-label font-size-h5 font-weight-bold">S</span>
+    @if(\Illuminate\Support\Facades\Auth::check())
+        {{-- User --}}
+        @if (config('layout.extras.user.display'))
+            @if (config('layout.extras.user.layout') == 'offcanvas')
+                {{-- Çıkış yap --}}
+                <div class="topbar-item">
+                    <div class="btn btn-icon w-auto d-flex align-items-center btn-lg px-2" style="color: #f64f61">
+                        <span class="symbol symbol-35 symbol-light-danger">
+                            <a href="{{route('logout')}}"><span class="symbol-label" style="width: 103px !important;">Çıkış Yap</span></a>
                         </span>
                     </div>
                 </div>
 
-                {{-- Dropdown --}}
-                <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
-                    @include('layout.partials.extras.dropdown._user')
+                <div class="topbar-item">
+                    <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2"
+                         id="kt_quick_user_toggle">
+                        <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Merhaba,</span>
+                        <span
+                            class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline text-capitalize mr-3">{{Auth::user()->name}}</span>
+                        <span class="symbol symbol-35 symbol-light-success">
+                        <span class="symbol-label font-size-h5 font-weight-bold text-uppercase">{{ substr(Auth::user()->name, 0, 1) }}</span>
+                    </span>
+                    </div>
                 </div>
-            </div>
+            @else
+                <div class="dropdown">
+                    {{-- Toggle --}}
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
+                        <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
+                            <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+                            <span
+                                class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
+                            <span class="symbol symbol-35 symbol-light-success">
+                            <span class="symbol-label font-size-h5 font-weight-bold">S</span>
+                        </span>
+                        </div>
+                    </div>
+
+                    {{-- Dropdown --}}
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
+                        @include('layout.partials.extras.dropdown._user')
+                    </div>
+                </div>
+            @endif
+        @endif
+    @else
+        {{-- User --}}
+        @if (config('layout.extras.user.display'))
+            @if (config('layout.extras.user.layout') == 'offcanvas')
+                {{-- Kayıt Ol --}}
+                <div class="topbar-item">
+                    <div class="btn btn-icon w-auto d-flex align-items-center btn-lg px-2"
+                         style="color: #f64f61">
+                        <span class="symbol symbol-35 symbol-success">
+                            <a href="{{route('register')}}"><span class="symbol-label" style="width: 103px !important;">Kayıt Ol</span></a>
+                        </span>
+                    </div>
+                </div>
+
+                {{-- Giriş yap --}}
+                <div class="topbar-item">
+                    <div class="btn btn-icon w-auto d-flex align-items-center btn-lg px-2"
+                         style="color: #f64f61">
+                        <span class="symbol symbol-35 symbol-light-success">
+                            <a href="{{route('login')}}"><span class="symbol-label" style="width: 103px !important;">Giriş Yap</span></a>
+                        </span>
+                    </div>
+                </div>
+            @else
+                <div class="dropdown">
+                    {{-- Toggle --}}
+                    <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
+                        <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2">
+                            <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+                            <span
+                                class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
+                            <span class="symbol symbol-35 symbol-light-success">
+                            <span class="symbol-label font-size-h5 font-weight-bold">S</span>
+                        </span>
+                        </div>
+                    </div>
+
+                    {{-- Dropdown --}}
+                    <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
+                        @include('layout.partials.extras.dropdown._user')
+                    </div>
+                </div>
+            @endif
         @endif
     @endif
 </div>

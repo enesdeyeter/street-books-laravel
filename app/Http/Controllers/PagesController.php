@@ -6,6 +6,30 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    public function books()
+    {
+        $page_title = 'Kitaplar';
+        $page_description = 'kitaplar anasayfası';
+
+        return view('pages.books.index', compact('page_title', 'page_description'));
+    }
+
+    public function profile()
+    {
+        $page_title = 'Profil';
+        $page_description = 'Hızlıca profiline göz at';
+
+        return view('pages.user.profile', compact('page_title', 'page_description'));
+    }
+
+    public function home()
+    {
+        $page_title = 'Anasayfa';
+        $page_description = 'kitaplar bla bla';
+
+        return view('pages.home', compact('page_title', 'page_description'));
+    }
+
     public function index()
     {
         $page_title = 'Dashboard';

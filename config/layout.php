@@ -70,7 +70,7 @@ return [
 
     // Page loader
     'page-loader' => [
-        'type' => '' // default, spinner-message, spinner-logo
+        'type' => 'yükleniyor...' // default, spinner-message, spinner-logo
     ],
 
     // Header
@@ -144,7 +144,7 @@ return [
     'aside' => [
         'self' => [
             'theme' => 'dark', // light, dark
-            'display' => true,
+            'display' => false,
             'fixed' => true,
             'minimize' => [
                 'toggle' => true, // allow toggle
@@ -226,7 +226,7 @@ return [
 
         // Cart
         'cart' => [
-            'display' => true,
+            'display' => false,
             'dropdown' => [
                 'style' => 'dark' // light|dark
             ]
@@ -234,7 +234,7 @@ return [
 
         // Quick Panel
         'quick-panel' => [
-            'display' => true,
+            'display' => false,
             'offcanvas' => [
                 'direction' => 'right'
             ]
@@ -242,12 +242,12 @@ return [
 
         // Chat
         'chat' => [
-            'display' => true,
+            'display' => false,
         ],
 
         // Page Toolbar
         'toolbar' => [
-            'display' => true
+            'display' => false
         ],
 
         // Scrolltop
