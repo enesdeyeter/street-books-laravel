@@ -24,13 +24,13 @@
                     <div class="tab-content">
                         <div class="row">
 
-                            {{--@foreach ($allBooks as $book)
+                            @foreach ($allBooks as $book)
                                 <div class="col-md-2 gutter-b overlay">
                                     <div class="book ">
                                         <a href="books/{{$book->slug}}"><img src="{{ $book->book_image }}" class="img-responsive"></a>
                                     </div>
                                 </div>
-                            @endforeach--}}
+                            @endforeach
 
 
                             <div class="col-md-2 gutter-b overlay">

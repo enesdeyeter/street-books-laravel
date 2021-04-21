@@ -128,14 +128,14 @@
         {{-- User --}}
         @if (config('layout.extras.user.display'))
             @if (config('layout.extras.user.layout') == 'offcanvas')
-                {{-- Çıkış yap --}}
+                {{-- Çıkış yap
                 <div class="topbar-item">
                     <div class="btn btn-icon w-auto d-flex align-items-center btn-lg px-2" style="color: #f64f61">
                         <span class="symbol symbol-35 symbol-light-danger">
                             <a href="{{route('logout')}}"><span class="symbol-label" style="width: 103px !important;">Çıkış Yap</span></a>
                         </span>
                     </div>
-                </div>
+                </div>--}}
 
                 <div class="topbar-item">
                     <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2"

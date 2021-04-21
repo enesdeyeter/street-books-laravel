@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@home');
 Route::get('/home', 'PagesController@home')->name('home');
 
-Route::get('/books', 'PagesController@books')->name('books');
+Route::get('/books', 'BooksController@index')->name('books');
+Route::get('/books/{id}', 'BooksController@show');
 
 
 Route::middleware('auth')->group(function (){
