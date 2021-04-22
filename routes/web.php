@@ -24,6 +24,10 @@ Route::middleware('auth')->group(function (){
     Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
     Route::get('/profile', 'PagesController@profile')->name('profile');
+
+    Route::get('/book/add', 'BooksController@create');
+    Route::post('/book/adding', 'BooksController@store')->name('add-book');
+    //Route::resource("book","BooksController");
 });
 
 

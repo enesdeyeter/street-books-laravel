@@ -40,11 +40,11 @@
                                 </a>
                                 <p class="text-dark-50">
                                     Street Books'ta eksik olduğunu düşündüğünüz kitaplar varsa lütfen bize bildirin.
-                                    Bildirdiğiniz kitap en kısa sürede sisteme eklenecektir.
+                                    Bildirdiğiniz kitaplar anında sisteme eklenecektir.
                                 </p>
                             </div>
                             <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
-                                <a href="#" target="_blank"
+                                <a href="{{ url('book/add') }}" target="_blank"
                                    class="btn btn-warning font-weight-bolder text-uppercase btn-success py-4 px-6">
                                     Kitap Bildirin <i class="fa fa-long-arrow-alt-right pl-3"></i>
                                 </a>

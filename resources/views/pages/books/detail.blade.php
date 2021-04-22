@@ -12,7 +12,7 @@
                         <div class="flex-shrink-0 mr-7 mt-lg-0 mt-3">
                             <div class="d-none d-sm-block">
                                 <img class="img-responsive" alt="image-{{ $base_book->slug }}"
-                                     src="{{ $base_book->book_image }}" style="border-radius: 4px">
+                                     src="{{ asset($base_book->book_image) }}" style="border-radius: 4px; max-width: 400px !important; max-height: 600px !important;">
                             </div>
                         </div>
                         <!--end: Pic-->
@@ -22,13 +22,13 @@
                             <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
                                 <div class="mr-3">
                                     <!--begin::Name-->
-                                    <span class="d-flex align-items-center text-dark font-size-h1 font-weight-bold mr-3">{{ $base_book->book_name }}
+                                    <span class="d-flex align-items-center text-dark font-size-h1 font-weight-bold mr-3 text-uppercase">{{ $base_book->book_name }}
                                         <i class="flaticon2-correct text-success icon-md ml-2"></i></span>
                                     <!--end::Name-->
                                     <!--begin::Contacts-->
                                     <div class="d-flex flex-wrap my-2">
                                         <a href="#"
-                                           class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2"
+                                           class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2 text-capitalize"
                                            data-toggle="popover" data-placement="top" data-content="Kitap Yazarı">
 															<span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
 																<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Communication/Mail-notification.svg-->
@@ -47,7 +47,7 @@
                                                                 <!--end::Svg Icon-->
 															</span>{{ $base_book->author_name }}</a>
                                         <a href="#"
-                                           class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2"
+                                           class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2 text-capitalize"
                                            data-toggle="popover" data-placement="top" data-content="Yayınevi">
 															<span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
 																<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/General/Lock.svg-->
@@ -64,7 +64,7 @@
                                                                 <!--end::Svg Icon-->
 															</span>{{ $base_book->publisher }}</a>
                                         <a href="#"
-                                           class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2"
+                                           class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2 text-capitalize"
                                            data-toggle="popover" data-placement="top" data-content="Kitap Kategorisi">
 															<span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
 																<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Map/Marker2.svg-->
@@ -105,7 +105,7 @@
                                     <!--end::Contacts-->
                                 </div>
                                 <div class="my-lg-0 my-1" data-toggle="popover" data-placement="top" data-content="Kitabı ekleyen kişi">
-                                    <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder text-uppercase mr-3"><i class="fa fa-info-circle"></i> {{Auth::user()->name}}</a>
+                                    <a href="#" class="btn btn-sm btn-light-primary font-weight-bolder text-uppercase mr-3"><i class="fa fa-info-circle"></i> {{ $check->getUserName->name }}</a>
                                 </div>
                             </div>
                             <!--end: Title-->
@@ -141,7 +141,7 @@
                             <div class="separator separator-solid"></div>
                             <!--begin: Content-->
                             <div class="d-flex align-items-end flex-wrap justify-content-between">
-                                <div class="flex-grow-1 font-weight-bold text-dark-50 font-size-lg py-5 py-lg-2 mr-5">{{ $base_book->description }}</div>
+                                <div class="flex-grow-1 font-weight-bold text-dark-50 font-size-lg py-5 py-lg-2 mr-5"><p>{!! $base_book->description  !!}</p></div>
                             </div>
                             <!--end: Content-->
                         </div>
@@ -165,7 +165,7 @@
 </svg><!--end::Svg Icon--></span>
                             <div class="d-flex flex-column text-dark-75">
                                 <span class="font-weight-bold font-size-sm">Yazar</span>
-                                <span class="font-weight-bolder font-size-h5">{{ $base_book->author_name }}</span>
+                                <span class="font-weight-bolder font-size-h5 text-capitalize">{{ $base_book->author_name }}</span>
                             </div>
                         </div>
                         <!--end: Item-->
@@ -183,7 +183,7 @@
 </svg><!--end::Svg Icon--></span>
                             <div class="d-flex flex-column text-dark-75">
                                 <span class="font-weight-bold font-size-sm">Yayınevi</span>
-                                <span class="font-weight-bolder font-size-h5">{{ $base_book->publisher }}</span>
+                                <span class="font-weight-bolder font-size-h5 text-capitalize">{{ $base_book->publisher }}</span>
                             </div>
                         </div>
                         <!--end: Item-->

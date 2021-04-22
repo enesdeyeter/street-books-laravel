@@ -13,4 +13,9 @@ class Book extends Model
     {
         return $this->hasOne('App\Category','id','category_id');
     }
+
+    public function getUserName()
+    {
+        return $this->hasOne('App\User','id','user_id');
+    }
 }
