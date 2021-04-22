@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a6aae6b-d280-415d-8071-1dfef8ac442b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dadad-2075804100407.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dasda-2282690392939.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dsadasdsa-1174746309954.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dsadasdsa-5985324474045.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dsadasdsa-7069141039191.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dsadasdsa-8384515442133.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/fasf-5791670324184.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/lroemae-7494365595045.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/marsli-9268277673641.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/nuri-demirag-7992943082001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/books/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/sarman-kediler-ne-ister-7822278723038.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Book.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/subheader/_subheader-v1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/subheader/_subheader-v1.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/books/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/books/detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/books/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/books/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +184,9 @@
       <workItem from="1618967468859" duration="2104000" />
       <workItem from="1619016075115" duration="20410000" />
       <workItem from="1619054832148" duration="4226000" />
-      <workItem from="1619087447389" duration="8457000" />
+      <workItem from="1619087447389" duration="8723000" />
+      <workItem from="1619102928375" duration="9000" />
+      <workItem from="1619112646673" duration="7250000" />
     </task>
     <servers />
   </component>

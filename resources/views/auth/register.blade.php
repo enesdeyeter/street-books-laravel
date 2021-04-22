@@ -38,7 +38,7 @@
             <div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
                 <!--begin::Aside header-->
                 <a href="#" class="text-center mb-10">
-                    <img src="{{asset('media/logos/logo-dark.svg')}}" class="max-h-70px" alt="street-books-logo" style="width: 346px"/>
+                    <img src="{{asset('media/logos/logo-dark.png')}}" class="max-h-70px" alt="street-books-logo" style="width: 346px"/>
                 </a>
                 <!--end::Aside header-->
                 <!--begin::Aside title-->

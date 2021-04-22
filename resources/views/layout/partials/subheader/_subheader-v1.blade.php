@@ -7,7 +7,7 @@
         <div class="d-flex align-items-center flex-wrap mr-1">
 
 			{{-- Page Title --}}
-            <h5 class="text-dark font-weight-bold my-2 mr-5">
+            <h5 class="text-dark font-weight-bold text-uppercase my-2 mr-5">
                 {{ @$page_title }}
 
                 @if (isset($page_description) && config('layout.subheader.displayDesc'))
@@ -40,49 +40,33 @@
                 @section('page_toolbar')
             @endif
 
-            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
+            <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Eylemler " data-placement="left">
                 <a href="#" class="btn btn-icon"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ Metronic::getSVG("media/svg/icons/Files/File-plus.svg", "svg-icon-success svg-icon-2x") }}
+                    {{ Metronic::getSVG("media/svg/icons/General/Settings-1.svg", "svg-icon-success svg-icon-2x") }}
                 </a>
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
                     {{-- Navigation --}}
                     <ul class="navi navi-hover">
                         <li class="navi-header font-weight-bold">
-                            Jump to:
-                            <i class="flaticon2-information" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
+                            Hızlı eylemler:
                         </li>
                         <li class="navi-separator mb-3"></li>
                         <li class="navi-item">
-                            <a href="#" class="navi-link">
-                                <span class="navi-icon"><i class="flaticon2-drop"></i></span>
-                                <span class="navi-text">Recent Orders</span>
+                            <a href="" class="navi-link" onclick="location.reload()">
+                                <span class="navi-icon"><i class="flaticon2-refresh-button"></i></span>
+                                <span class="navi-text">Sayfayı yenile</span>
                             </a>
                         </li>
                         <li class="navi-item">
-                            <a href="#" class="navi-link">
-                                <span class="navi-icon"><i class="flaticon2-calendar-8"></i></span>
-                                <span class="navi-text">Support Cases</span>
-                            </a>
-                        </li>
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                                <span class="navi-icon"><i class="flaticon2-telegram-logo"></i></span>
-                                <span class="navi-text">Projects</span>
-                            </a>
-                        </li>
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                                <span class="navi-icon"><i class="flaticon2-new-email"></i></span>
-                                <span class="navi-text">Messages</span>
-                                <span class="navi-label">
-                                    <span class="label label-success label-rounded">5</span>
-                                </span>
+                            <a href="#" class="navi-link" onclick="window.print();">
+                                <span class="navi-icon"><i class="flaticon2-print"></i></span>
+                                <span class="navi-text">Sayfayı yazdır</span>
                             </a>
                         </li>
                         <li class="navi-separator mt-3"></li>
                         <li class="navi-footer">
-                            <a class="btn btn-light-primary font-weight-bolder btn-sm" href="#">Upgrade plan</a>
-                            <a class="btn btn-clean font-weight-bold btn-sm" href="#" data-toggle="tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
+                            <a class="btn btn-light-success font-weight-bolder btn-sm" href="#">Öneride bulun</a>
+                            <a class="btn btn-clean font-weight-bold text-danger btn-sm" href="#">Şikayet et</a>
                         </li>
                     </ul>
                 </div>

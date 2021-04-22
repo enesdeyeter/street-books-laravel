@@ -4,13 +4,13 @@
         <a href="{{ url('/home') }}">
 
             @php
-                $kt_logo_image = 'logo-dark.svg'
+                $kt_logo_image = 'logo-dark.png'
             @endphp
 
             @if (config('layout.aside.self.display') == false)
 
                 @if (config('layout.header.self.theme') === 'light')
-                    @php $kt_logo_image = 'logo-dark.svg' @endphp
+                    @php $kt_logo_image = 'logo-dark.png' @endphp
                 @elseif (config('layout.header.self.theme') === 'dark')
                     @php $kt_logo_image = 'logo-light.png' @endphp
                 @endif

@@ -1,6 +1,21 @@
 {{-- Extends layout --}}
 @extends('layout.default')
 
+{{-- Scripts Section --}}
+@section('styles')
+    <style>
+        @media (max-width:570px){
+            .book img{
+                width: 124px !important;
+                height: 190px !important;
+                object-fit: cover;
+                border-radius: 4px;
+                transition: all .5s;
+            }
+        }
+    </style>
+@endsection
+
 {{-- Content --}}
 @section('content')
 
@@ -22,11 +37,11 @@
                         <div class="row">
 
                             @foreach ($allBooks as $book)
-                                <div class="col-md-2 gutter-b overlay">
-                                    <div class="book ">
-                                        <a href="books/{{$book->slug}}"><img src="{{ $book->book_image }}"
-                                                                             class="img-responsive"
-                                                                             alt="image-{{ $book->slug }}"></a>
+                                <div class="col col-xl-2 col-md-3 text-capitalize" data-toggle="popover" data-placement="top" data-content="{{ $book->book_name }}">
+                                    <div class="book">
+                                        <a href="books/{{$book->slug}}">
+                                            <img src="{{ $book->book_image }}" class="img-responsive" alt="image-{{ $book->slug }}">
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach

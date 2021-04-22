@@ -5,9 +5,10 @@
     <div class="{{ Metronic::printClasses('footer-container', false) }} d-flex flex-column flex-md-row align-items-center justify-content-between">
         {{-- Copyright --}}
         <div class="text-dark order-2 order-md-1">
-            <span class="text-muted font-weight-bold mr-2">{{ date("Y") }} &copy;</span>
-            <a href="{{ url('home') }}" class="text-dark-75 text-hover-primary">
-                <img src="{{ asset('media/logos/logo-dark.svg') }}" alt="street-books-logo" style="width: 127px; opacity: .2">
+            <span class="text-muted font-weight-bold">{{ date("Y") }} &copy;</span>
+            <a href="{{ url('home') }}" class="text-muted font-weight-bold">
+                Street Books
+                {{--<img src="{{ asset('media/logos/logo-dark.png') }}" alt="street-books-logo" style="width: 127px; opacity: .2">--}}
             </a>
             {{--            <a href="" target="_blank" class="text-dark-75 text-hover-primary">StreetBooks</a>--}}
         </div>
