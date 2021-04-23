@@ -5,16 +5,273 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a6aae6b-d280-415d-8071-1dfef8ac442b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/sarman-kediler-ne-ister-7822278723038.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_23_022555_add_books_first_edtion_year.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/das-7760231805853.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/fasf-5511333786655.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/kendine-yabancilasan-insan-1554904217625.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/kendine-yabancilasan-insan-3012469151529.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/marsli-7440468863323.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/serenad-7723662619350.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/uzun-yasamanin-tuyolari-8018202315093.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/bg-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/demo-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/home-2-bg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/bg/sc-home1-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/demos/demo9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/error/bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/error/bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/error/bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/error/bg4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/error/bg5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/products/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/project-logos/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/project-logos/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/project-logos/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/project-logos/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/project-logos/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/project-logos/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/project-logos/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-40.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-42.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-45.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-46.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-47.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-48.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-49.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-50.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-52.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-53.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-54.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-55.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-56.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-57.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-58.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-59.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-60.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-61.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-62.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-63.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-65.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-66.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-67.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-68.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-69.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-70.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-71.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-72.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x400/img-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-600x600/img-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/30.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/32.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/33.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/36.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/38.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/stock-900x600/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/100_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/300_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/default.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/user1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/user2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/user3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/user4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/metronic/media/users/user5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/subheader/_subheader-v1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/subheader/_subheader-v1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/books/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/books/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/books/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/books/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/books/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/books/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +411,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -186,7 +444,8 @@
       <workItem from="1619054832148" duration="4226000" />
       <workItem from="1619087447389" duration="8723000" />
       <workItem from="1619102928375" duration="9000" />
-      <workItem from="1619112646673" duration="7250000" />
+      <workItem from="1619112646673" duration="9858000" />
+      <workItem from="1619130003096" duration="3781000" />
     </task>
     <servers />
   </component>
@@ -198,7 +457,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -207,5 +472,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -59,21 +59,26 @@ class BooksController extends Controller
         $book = new Book;
         $faker = Faker::create();
 
-        $book->book_name = $request->book_name;
-        $book->author_name = $request->author_name;
+        $r_title = Str::title($request->book_name);
+        $new_title = Str::replaceArray('I', ['İ'], $r_title);
+
+        $book->book_name = $new_title;
+        $book->author_name = Str::title($request->author_name);
         $book->description = $request->book_description;
-        $book->publisher = $request->publisher;
+        $book->publisher = Str::title($request->publisher);
         $book->category_id = $request->category_id;
         $book->isbn = $request->isbn_number;
         $book->pages = $request->page_number;
         $book->slug = Str::slug($request->book_name);
+        $book->first_edition_year = $request->first_edition_year;
+        $book->user_id = Auth::user()->id;
 
         if ($request->file('book_image')) {
             $imageName = Str::slug($request->book_name) . '-' . $faker->biasedNumberBetween('1', '9999999999999', 'sqrt') . '.' . $request->book_image->getClientOriginalExtension();
-            $request->book_image->move(public_path('uploads/book_image'), $imageName);
             $book->book_image = 'uploads/book_image/' . $imageName;
-            $book->user_id = Auth::user()->id;
 
+            //dd($book);
+            $request->book_image->move(public_path('uploads/book_image'), $imageName);
             $book->save();
 
             return redirect('/books/' . Str::slug($request->book_name));

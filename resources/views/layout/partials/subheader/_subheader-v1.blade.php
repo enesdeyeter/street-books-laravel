@@ -7,7 +7,7 @@
         <div class="d-flex align-items-center flex-wrap mr-1">
 
 			{{-- Page Title --}}
-            <h5 class="text-dark font-weight-bold text-uppercase my-2 mr-5">
+            <h5 class="text-dark font-weight-bold my-2 mr-5">
                 {{ @$page_title }}
 
                 @if (isset($page_description) && config('layout.subheader.displayDesc'))
