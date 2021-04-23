@@ -149,7 +149,7 @@
                                                              id="kt_contacts_edit_avatar"
                                                              style="background-image: url({{ asset('/media/users/blank.png)')}} ">
                                                             <div class="image-input-wrapper"
-                                                                 style="background-image: url() "></div>
+                                                                 style="background-image: url({{asset('media/books/bg-book.png)')}}"></div>
                                                             <label
                                                                 class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                 data-action="change" data-toggle="tooltip" title=""
@@ -259,6 +259,15 @@
 
                                                 </div>
 
+                                                <div class="form-group">
+                                                    <label>Kitap İlk Baskı Yılı</label>
+                                                    <div class="input-group">
+                                                        <input class="date-own form-control form-control-solid form-control-lg" name="first_edition_year" type="text">
+                                                    </div>
+                                                    <span class="form-text text-muted">Kitabın ilk baskı yılını seçiniz</span>
+
+                                                </div>
+
                                                 <!--begin::Select-->
                                                 <div class="form-group">
                                                     <label>Kitap Sayfa Sayısı</label>
@@ -331,6 +340,11 @@
             $newISBN = $("#isbn_field").val(getRandom(13));
             console.log($newISBN);
         }
+
+        $('.date-own').datepicker({
+            minViewMode: 2,
+            format: 'yyyy'
+        });
 
     </script>
 

@@ -43,13 +43,12 @@
                 </a>
                 <!--end::Aside header-->
                 <!--begin::Aside title-->
-                <h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Discover Amazing Metronic
-                    <br />with great build tools</h3>
+                <h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg mb-5" style="color: #986923;">Bir sonraki favori kitabınızla tanışın</h3>
                 <!--end::Aside title-->
             </div>
             <!--end::Aside Top-->
             <!--begin::Aside Bottom-->
-            <div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url({{asset('/media/svg/illustrations/features.svg')}})"></div>
+            <div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url({{asset('/media/svg/illustrations/login1.svg')}})"></div>
             <!--end::Aside Bottom-->
         </div>
         <!--begin::Aside-->
