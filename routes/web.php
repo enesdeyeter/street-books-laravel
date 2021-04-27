@@ -32,6 +32,9 @@ Route::middleware('auth')->group(function (){
 
     Route::get('/book/add', 'BooksController@create');
     Route::post('/book/adding', 'BooksController@store')->name('add-book');
+
+    Route::post('/like', 'BooksController@like')->name('like');
+    Route::post('/dislike', 'BooksController@dislike')->name('dislike');
     //Route::resource("book","BooksController");
 });
 

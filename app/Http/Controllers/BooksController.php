@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Faker\Factory as Faker;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class BooksController extends Controller
 {
@@ -53,7 +54,7 @@ class BooksController extends Controller
         $page_title = 'Kitaplar';
         $allBooks = Book::all()->sortByDesc("id");
 
-        //dd($allBooks);
+        $image = $request->file('book_image');
 
         //dd($request);
         $book = new Book;
@@ -75,19 +76,72 @@ class BooksController extends Controller
         $book->user_id = Auth::user()->id;
 
         if ($request->file('book_image')) {
-            $imageName = Str::slug($request->book_name) . '-' . $faker->biasedNumberBetween('1', '9999999999999', 'sqrt') . '.' . $request->book_image->getClientOriginalExtension();
+            $imageName = Str::slug($request->book_name) . '-' . $faker->biasedNumberBetween('1', '9999999999999', 'sqrt') . '.' . $image->extension();
             $book->book_image = 'uploads/book_image/' . $imageName;
 
+            $filePath = public_path('/uploads/book_image/');
+
+            $img = Image::make($image->path());
+
+            $img->resize(400, 600, function ($const) {
+                $const->aspectRatio();
+            })->save($filePath.'/'.$imageName);
+
+            //dd($img->filesize());
+
             //dd($book);
-            $request->book_image->move(public_path('uploads/book_image'), $imageName);
             $book->save();
 
-            return redirect('/books/' . Str::slug($request->book_name));
+            return redirect('/books/' . Str::slug($request->book_name))->with('success','teşekkürler! kitap başarıyla sisteme eklendi.');;
 
         } else
-            return 'kitap kapak fotoğrafını yüklerken bir sorun oldu';
+            return 'lütfen kitap kapak fotoğrafını yükleyiniz';
         die();
 
+    }
+
+    public function like(Request $request){
+        $checkRating = DB::table("reviews")->where('book_id', $request->book_id)->where("author_id",Auth::user()->id)->count();
+
+        if ($checkRating>=1){
+            return back()->with('error','daha önce bu kitap için tercihte bulundunuz!');
+        }
+
+        else{
+            $user = Auth::user();
+            $post = Book::where('id', $request->book_id)->first();
+
+            $rating = $post->rating([
+                'book_id' => $post->id,
+                'book_name' => $post->book_name,
+                'rating' => 5,
+                'recommend' => 'Yes',
+                'approved' => true, // This is optional and defaults to false
+            ], $user);
+
+            return back()->with('success','teşekkürler! bu kitap için bir tavsiyede bulundunuz.');
+        }
+    }
+
+    public function dislike(Request $request){
+        $checkRating = DB::table("reviews")->where('book_id', $request->book_id)->where("author_id",Auth::user()->id)->count();
+
+        if ($checkRating>=1){
+            return back()->with('error','daha önce bu kitap için tercihte bulundunuz!');
+        }
+
+        $user = Auth::user();
+        $post = Book::where('id', $request->book_id)->first();
+
+        $rating = $post->rating([
+            'book_id' => $post->id,
+            'book_name' => $post->book_name,
+            'rating' => 1,
+            'recommend' => 'Yes',
+            'approved' => true, // This is optional and defaults to false
+        ], $user);
+
+        return back()->with('success','teşekkürler! bu kitap için bir tavsiyede bulundunuz.');
     }
 
     /**
@@ -104,12 +158,15 @@ class BooksController extends Controller
 
             $base_book = DB::table("books")->where('slug', $slug)->first();
 
+            $like = DB::table("reviews")->where('book_id', $check->id)->where("rating",'=',5)->count();
+            $dislike = DB::table("reviews")->where('book_id', $check->id)->where("rating",'=',1)->count();
+
             //dd($base_book);
             $page_title = $base_book->book_name;
             $page_description = 'ISBN: ' . $base_book->isbn;
 
 
-            return view("pages.books.detail", compact("page_title", "page_description", "base_book", "check"));
+            return view("pages.books.detail",compact("page_title","page_description","base_book","check","like","dislike"));
         } else {
             return abort(404);
         }

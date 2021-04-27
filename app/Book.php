@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Codebyray\ReviewRateable\Contracts\ReviewRateable;
+use Codebyray\ReviewRateable\Traits\ReviewRateable as ReviewRateableTrait;
 
-class Book extends Model
+class Book extends Model implements ReviewRateable
 {
+    use ReviewRateableTrait;
+
     protected $primaryKey = 'id';
     protected $table = 'books';
 

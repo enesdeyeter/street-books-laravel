@@ -42,8 +42,8 @@
                 </a>
                 <!--end::Aside header-->
                 <!--begin::Aside title-->
-                <h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Discover Amazing Metronic
-                    <br />with great build tools</h3>
+                <h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Kitaplar ile dolu bir dünyaya giriş yapmak için son bir adımınız kaldı.</h3>
+                <h5 class="font-weight-bolder text-center font-size-h5 font-size-h5-lg" style="color: #986923; opacity: .7; margin-top: 10px">hemen formu doldurun ve bize katılın</h5>
                 <!--end::Aside title-->
             </div>
             <!--end::Aside Top-->

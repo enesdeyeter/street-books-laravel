@@ -308,7 +308,7 @@
                   </span>
                             <div class="d-flex flex-column text-dark-75">
                                 <span class="font-weight-bold font-size-sm">Tavsiye Edenler</span>
-                                <span class="font-weight-bolder font-size-h5">{{ $base_book->like }} Kişi</span>
+                                <span class="font-weight-bolder font-size-h5">{{ $like }} Kişi</span>
                             </div>
                         </div>
                         <!--end: Item-->
@@ -334,7 +334,7 @@
                   </span>
                             <div class="d-flex flex-column text-dark-75">
                                 <span class="font-weight-bold font-size-sm">Tavsiye Etmeyenler</span>
-                                <span class="font-weight-bolder font-size-h5">{{ $base_book->dislike }} Kişi</span>
+                                <span class="font-weight-bolder font-size-h5">{{ $dislike }} Kişi</span>
                             </div>
                         </div>
                         <!--end: Item-->
@@ -356,58 +356,55 @@
                         </div>
                         @if(\Illuminate\Support\Facades\Auth::check())
                             <div class="ml-6 ml-lg-0 ml-xxl-6" style="display: flex">
-                                <form action="{{--{{route('like')}}--}}" method="POST">
+                                <form action="{{route('like')}}" method="POST">
                                     @csrf
                                     <input type="hidden" id="book_id" name="book_id" value="{{ $base_book->id }}">
                                     <button type="submit" class="btn btn-light-success font-weight-bolder mr-2 mb-2">
-                        <span class="svg-icon svg-icon-2x">
-                           <svg xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                height="24px" viewBox="0 0 24 24" version="1.1">
-                              <g stroke="none" stroke-width="1" fill="none"
-                                 fill-rule="evenodd">
-                                 <rect x="0" y="0" width="24" height="24"/>
-                                 <path
-                                     d="M9,10 L9,19 L10.1525987,19.3841996 C11.3761964,19.7920655 12.6575468,20 13.9473319,20 L17.5405883,20 C18.9706314,20 20.2018758,18.990621 20.4823303,17.5883484 L21.231529,13.8423552 C21.5564648,12.217676 20.5028146,10.6372006 18.8781353,10.3122648 C18.6189212,10.260422 18.353992,10.2430672 18.0902299,10.2606513 L14.5,10.5 L14.8641964,6.49383981 C14.9326895,5.74041495 14.3774427,5.07411874 13.6240179,5.00562558 C13.5827848,5.00187712 13.5414031,5 13.5,5 L13.5,5 C12.5694044,5 11.7070439,5.48826024 11.2282564,6.28623939 L9,10 Z"
-                                     fill="#000000"/>
-                                 <rect fill="#000000" opacity="0.3" x="2" y="9"
-                                       width="5" height="11" rx="1"/>
-                              </g>
-                           </svg>
-                        </span>
+                                        <span class="svg-icon svg-icon-2x">
+                                           <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                              <g stroke="none" stroke-width="1" fill="none"
+                                                 fill-rule="evenodd">
+                                                 <rect x="0" y="0" width="24" height="24"/>
+                                                 <path
+                                                     d="M9,10 L9,19 L10.1525987,19.3841996 C11.3761964,19.7920655 12.6575468,20 13.9473319,20 L17.5405883,20 C18.9706314,20 20.2018758,18.990621 20.4823303,17.5883484 L21.231529,13.8423552 C21.5564648,12.217676 20.5028146,10.6372006 18.8781353,10.3122648 C18.6189212,10.260422 18.353992,10.2430672 18.0902299,10.2606513 L14.5,10.5 L14.8641964,6.49383981 C14.9326895,5.74041495 14.3774427,5.07411874 13.6240179,5.00562558 C13.5827848,5.00187712 13.5414031,5 13.5,5 L13.5,5 C12.5694044,5 11.7070439,5.48826024 11.2282564,6.28623939 L9,10 Z"
+                                                     fill="#000000"/>
+                                                 <rect fill="#000000" opacity="0.3" x="2" y="9"
+                                                       width="5" height="11" rx="1"/>
+                                              </g>
+                                           </svg>
+                                        </span>
                                         Evet, tavsiye ederim
                                     </button>
                                 </form>
-                                <form action="{{--{{route('dislike')}}--}}" method="POST">
+                                <form action="{{route('dislike')}}" method="POST">
                                     @csrf
                                     <input type="hidden" id="book_id" name="book_id" value="{{ $base_book->id }}">
                                     <button type="submit" class="btn btn-light-danger font-weight-bolder mr-2">
-                        <span class="svg-icon svg-icon-2x">
-                           <svg xmlns="http://www.w3.org/2000/svg"
-                                style="transform: rotateX(180deg)"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                height="24px" viewBox="0 0 24 24" version="1.1">
-                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                 <rect x="0" y="0" width="24" height="24"/>
-                                 <path
-                                     d="M9,10 L9,19 L10.1525987,19.3841996 C11.3761964,19.7920655 12.6575468,20 13.9473319,20 L17.5405883,20 C18.9706314,20 20.2018758,18.990621 20.4823303,17.5883484 L21.231529,13.8423552 C21.5564648,12.217676 20.5028146,10.6372006 18.8781353,10.3122648 C18.6189212,10.260422 18.353992,10.2430672 18.0902299,10.2606513 L14.5,10.5 L14.8641964,6.49383981 C14.9326895,5.74041495 14.3774427,5.07411874 13.6240179,5.00562558 C13.5827848,5.00187712 13.5414031,5 13.5,5 L13.5,5 C12.5694044,5 11.7070439,5.48826024 11.2282564,6.28623939 L9,10 Z"
-                                     fill="#000000"/>
-                                 <rect fill="#000000" opacity="0.3" x="2" y="9" width="5" height="11"
-                                       rx="1"/>
-                              </g>
-                           </svg>
-                        </span>
+                                        <span class="svg-icon svg-icon-2x">
+                                           <svg xmlns="http://www.w3.org/2000/svg"
+                                                style="transform: rotateX(180deg)"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                 <rect x="0" y="0" width="24" height="24"/>
+                                                 <path
+                                                     d="M9,10 L9,19 L10.1525987,19.3841996 C11.3761964,19.7920655 12.6575468,20 13.9473319,20 L17.5405883,20 C18.9706314,20 20.2018758,18.990621 20.4823303,17.5883484 L21.231529,13.8423552 C21.5564648,12.217676 20.5028146,10.6372006 18.8781353,10.3122648 C18.6189212,10.260422 18.353992,10.2430672 18.0902299,10.2606513 L14.5,10.5 L14.8641964,6.49383981 C14.9326895,5.74041495 14.3774427,5.07411874 13.6240179,5.00562558 C13.5827848,5.00187712 13.5414031,5 13.5,5 L13.5,5 C12.5694044,5 11.7070439,5.48826024 11.2282564,6.28623939 L9,10 Z"
+                                                     fill="#000000"/>
+                                                 <rect fill="#000000" opacity="0.3" x="2" y="9" width="5" height="11"
+                                                       rx="1"/>
+                                              </g>
+                                           </svg>
+                                        </span>
                                         Hayır, tavsiye etmem
                                     </button>
                                 </form>
                             </div>
                         @else
                             <div class="ml-6 ml-lg-0 ml-xxl-6 ">
-                                <p class="font-size-h6 mb-0">Giriş yapmanız gerekiyor. <u><a href="{{route('login')}}"
-                                                                                             class="font-weight-boldest">Giriş
-                                            Yap</a></u></p>
-                                <p class="font-size-lg text-muted">Kitap hakkında görüş bildirmek için giriş
-                                    yapmalısınız.</p>
+                                <p class="font-size-h6 mb-0">Giriş yapmanız gerekiyor.<u><a href="{{route('login')}}" class="font-weight-boldest">Giriş Yap</a></u></p>
+                                <p class="font-size-lg text-muted">Kitap hakkında görüş bildirmek için giriş yapmalısınız.</p>
                             </div>
                         @endif
                     </div>
