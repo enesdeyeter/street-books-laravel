@@ -5,10 +5,11 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravelista\Comments\Commenter;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Commenter;
 
     /**
      * The attributes that are mass assignable.
@@ -36,4 +37,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $primaryKey = 'id';
+    protected $table = 'users';
+
+    public function getUserData()
+    {
+        return $this->hasMany('App\Comment','commenter_id','id');
+    }
 }

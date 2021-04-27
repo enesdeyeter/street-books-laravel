@@ -22,8 +22,6 @@ class CreateBooksTable extends Migration
             $table->string("author_name");
             $table->string("publisher");
             $table->integer("pages")->default(0);
-            $table->integer("like")->default(0);
-            $table->integer("dislike")->default(0);
             $table->string("slug");
             $table->string('isbn');
 

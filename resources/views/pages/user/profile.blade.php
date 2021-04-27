@@ -165,92 +165,68 @@
                     <div class="card-header border-0 py-5">
                         <h3 class="card-title align-items-start flex-column">
                             <span class="card-label font-weight-bolder text-dark">Yaptığım Yorumlar</span>
-                            <span class="text-muted mt-3 font-weight-bold font-size-sm">Kitaplar hakkında belirttiğin görüşler</span>
+                            <span class="text-muted mt-3 font-weight-bold font-size-sm">Kitaplar hakkında yaptığın tüm yorumlar</span>
                         </h3>
                         <div class="card-toolbar">
                   <span
-                      class="font-weight-bolder font-size-sm text-muted text-hover-dark">68 yorum bulundu</span>
+                      class="font-weight-bolder font-size-sm text-muted text-hover-dark">{{ $comments->count() }} yorum bulundu</span>
                         </div>
                     </div>
                     <!--end::Header-->
                     <!--begin::Body-->
                     <div class="card-body pt-0 pb-3">
-                    @if(Auth::check())
+                    @if($comments[0]->approved == 1)
                         <!--begin::Table-->
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="card card-custom card-collapsed gutter-b" data-card="true"
-                                         id="kt_card_4">
-                                        <div class="card-header">
-                                            <div class="card-title">
-                                                <h3 class="card-label">Şeker Portakalı</h3>
+                            <div class="timeline timeline-3">
+                                <div class="timeline-items mb-5">
+                                    @foreach($comments as $item)
+
+                                        <div class="timeline-item ">
+                                            <div class="timeline-media">
+                                                <a href="books/{{$item->slug}}"><img alt="image-book-{{$item->slug}}" src="{{ $item->book_image }}"></a>
                                             </div>
-                                            <div class="card-toolbar">
-                                                <a href="#" class="btn btn-icon btn-sm btn-light-primary"
-                                                   data-card-tool="toggle">
-                                                    <i class="ki ki-arrow-up icon-nm"></i>
-                                                </a>
-                                                <a href="#" class="btn btn-icon btn-sm btn-light-primary ml-3"
-                                                   data-card-tool="toggle">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="pt-4 d-flex flex-column justify-content-between">
-                                                <!--begin::User-->
-                                                <div class="d-flex align-items-center mb-7">
-                                                    <!--begin::Pic-->
-                                                    <div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
-                                                        <img class="img-responsive" alt="Pic"
-                                                             src="{{asset('uploads/book_image/seker-portakali-6469704432632.jpeg')}}"
-                                                             style="width: 80px !important; max-width: 100px !important;">
+                                            <div class="timeline-content">
+                                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="mr-2">
+                                                        <span
+                                                           class="text-dark-75 text-hover-primary font-weight-bold">{{ $item->book_name }}</span>
+                                                        @if ($loop->first) <span
+                                                            class="label label-light-success font-weight-bolder pulse pulse-success text-uppercase label-inline ml-2">
+                                                            <span
+                                                                class="pulse-ring"></span>Yeni</span> @endif
+                                                        <br>
+                                                        <span
+                                                            class="text-muted">{{\Carbon\Carbon::parse($item->comment_create_at)->diffForHumans() }}</span>
 
                                                     </div>
-                                                    <!--end::Pic-->
-                                                    <!--begin::Title-->
-                                                    <div class="d-flex flex-column">
-                                                        <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Şeker Portakalı</a>
-                                                        <span class="font-weight-bold text-dark-75">Lorem ipsum dolor</span>
-                                                        <span class="font-weight-bold text-dark-50">14:28 27/04/2021</span>
+                                                    <div class="dropdown ml-2" data-toggle="tooltip" title=""
+                                                         data-placement="left" data-original-title="Yorumu gör">
+                                                        <a href="books/{{ $item->slug }}"
+                                                           class="btn btn-default btn-sm btn-sm btn-icon">
+                                                            <i class="ki ki-long-arrow-next"></i>
+                                                        </a>
                                                     </div>
-                                                    <!--end::Title-->
                                                 </div>
-                                                <!--end::User-->
-                                                <!--begin::Desc-->
-                                                <p class="mb-7">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                    elit. Corporis dolorum fugit illo itaque iusto maxime neque nihil,
-                                                    nisi possimus quaerat, rerum sed temporibus! A debitis esse fugit
-                                                    provident soluta unde. Lorem ipsum dolor sit amet, consectetur
-                                                    adipisicing elit. Accusamus architecto blanditiis consequatur
-                                                    eligendi enim eveniet fuga fugiat iure, modi molestiae molestias non
-                                                    sequi! Accusamus non numquam quo sapiente sed, tempore? Lorem ipsum
-                                                    dolor sit amet, consectetur adipisicing elit. Ab commodi dignissimos
-                                                    maiores nisi officia quibusdam quidem quod veniam. Autem consequatur
-                                                    eius expedita ipsam omnis saepe sit tempora tenetur unde vero.</p>
-                                                <!--end::Desc-->
-                                                <!--end::Info-->
-                                                <a href="#"
-                                                   class="btn btn-block btn-sm btn-light-warning font-weight-bolder text-uppercase py-4">write
-                                                    message</a>
+                                                <p class="p-0">{{ $item->comment }}</p>
                                             </div>
                                         </div>
-                                    </div>
+
+                                    @endforeach
                                 </div>
                             </div>
+
+                            {{ $comments->links() }}
                         @else
                             <div class="alert alert-warning">
                                 <p>henüz hiç yorum yapmadın... </p>
                             </div>
-                    @endif
-                    <!--end::Table-->
+                        @endif
+
                     </div>
-                    <!--end::Body-->
                 </div>
-                <!--end::Advance Table Widget 8-->
             </div>
-            <!--end::Content-->
         </div>
+
         {{-- en çok beğenilen kitaplar --}}
         <div class="row">
             <div class="col-lg-12">

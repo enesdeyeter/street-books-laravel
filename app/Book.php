@@ -3,12 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravelista\Comments\Commentable;
 use Codebyray\ReviewRateable\Contracts\ReviewRateable;
 use Codebyray\ReviewRateable\Traits\ReviewRateable as ReviewRateableTrait;
 
 class Book extends Model implements ReviewRateable
 {
-    use ReviewRateableTrait;
+    use ReviewRateableTrait, Commentable;
 
     protected $primaryKey = 'id';
     protected $table = 'books';

@@ -434,6 +434,7 @@
     <div class="row" id="comment">
         <div class="col-md-12">
             <h3 class="display-4 font-weight-bold mt-5 mb-5 text-center">Diğer okuyucuların görüşleri</h3>
+            @comments(['model' => App\Book::find($base_book->id)])
         </div>
     </div>
 @endsection

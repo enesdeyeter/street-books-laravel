@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -21,7 +23,17 @@ class PagesController extends Controller
         $page_title = 'Profil';
         $page_description = 'Hızlıca profiline göz at';
 
-        return view('pages.user.profile', compact('page_title', 'page_description'));
+        $comments = DB::table('users')
+            ->select('*','comments.created_at as comment_create_at')
+            ->leftJoin('comments','comments.commenter_id','=','users.id')
+            ->leftJoin('books','books.id','=','comments.commentable_id')
+            ->where('users.id',Auth::user()->id)
+            ->orderBy('comment_create_at','desc')
+            ->paginate(6);
+
+        //dd($comments);
+
+        return view('pages.user.profile', compact('page_title', 'page_description','comments'));
     }
 
     public function categoryPage(Request $request){
