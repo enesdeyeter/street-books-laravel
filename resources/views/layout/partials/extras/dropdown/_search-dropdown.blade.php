@@ -1,13 +1,13 @@
 <div class="quick-search quick-search-dropdown" id="kt_quick_search_dropdown">
     {{-- Form --}}
-    <form method="get" class="quick-search-form">
+    <form method="get" class="quick-search-form" autofocus>
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">
                     {{ Metronic::getSVG("media/svg/icons/General/Search.svg", "svg-icon-lg") }}
                 </span>
             </div>
-            <input type="text" class="form-control" placeholder="Search..."/>
+            <input type="text" class="form-control" placeholder="Kitap adı veya yazar adı giriniz..." autofocus/>
             <div class="input-group-append">
                 <span class="input-group-text">
                     <i class="quick-search-close ki ki-close icon-sm text-muted"></i>

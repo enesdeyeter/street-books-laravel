@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
+use App\Category;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -20,6 +22,54 @@ class PagesController extends Controller
         $page_description = 'Hızlıca profiline göz at';
 
         return view('pages.user.profile', compact('page_title', 'page_description'));
+    }
+
+    public function categoryPage(Request $request){
+        $category = Category::query()->where('slug', $request->id)->first();
+
+        $page_title = $category->name.' Kategorisi';
+        $page_description = 'Bu kategoriye ait kitaplar';
+
+
+        if ($category!=null){
+            $category_result = $category->getAllCategoryBooks;
+            return view('pages.category-page', compact('page_title', 'page_description','category_result'));
+        }
+
+        else
+            abort(404);
+    }
+
+    public function authorPage(Request $request){
+        $author = Book::query()->where('author_name_slug', $request->id)->get();
+
+        if ($author->count() > 0){
+            //dd($author);
+            $page_title = $author[0]->author_name;
+            $page_description = 'Bu yazara ait kitaplar';
+
+            return view('pages.author-page', compact('page_title', 'page_description','author'));
+        }
+        else
+            return abort(404);
+    }
+
+    public function quickSearch(Request $request)
+    {
+        $search = $request->input('query');
+        //dd($search);
+
+        $search_result_book = Book::query()
+            ->where('book_name', 'like', '%'.$search.'%')
+            ->get();
+
+        //dd($search_result_book);
+
+        $search_result_author = Book::query()
+            ->where('author_name', 'like', "%{$search}%")
+            ->get();
+
+        return view('layout.partials.extras._quick_search_result', compact('search_result_book','search_result_author','search'));
     }
 
     public function home()
@@ -121,11 +171,5 @@ class PagesController extends Controller
         $page_description = 'This is svg test page';
 
         return view('pages.icons.svg', compact('page_title', 'page_description'));
-    }
-
-    // Quicksearch Result
-    public function quickSearch()
-    {
-        return view('layout.partials.extras._quick_search_result');
     }
 }

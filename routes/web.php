@@ -19,6 +19,11 @@ Route::get('/home', 'PagesController@home')->name('home');
 Route::get('/books', 'BooksController@index')->name('books');
 Route::get('/books/{id}', 'BooksController@show');
 
+Route::get('/category/{id}', 'PagesController@categoryPage')->name("categoryPage");
+Route::get('/author/{id}', 'PagesController@authorPage')->name("authorPage");
+
+Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search');
+
 
 Route::middleware('auth')->group(function (){
     Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -30,9 +35,6 @@ Route::middleware('auth')->group(function (){
     //Route::resource("book","BooksController");
 });
 
-
-// Quick search dummy route to display html elements in search dropdown (header search)
-Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search');
 
 Auth::routes();
 

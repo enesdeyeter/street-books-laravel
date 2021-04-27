@@ -25,8 +25,8 @@
                 <!--begin::Header-->
                 <div class="card-header border-0 py-5">
                     <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label font-weight-bolder text-dark">Yeni Eklenen Kitaplar</span>
-                        <span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
+                        <span class="card-label font-weight-bolder text-dark">{{ $page_title }} </span>
+                        <span class="text-muted mt-3 font-weight-bold font-size-sm"> Bu kategoriye ait {{ $category_result->count() }} kitap bulundu </span>
                     </h3>
                 </div>
                 <!--end::Header-->
@@ -35,11 +35,11 @@
                     <div class="tab-content">
                         <div class="row">
 
-                            @foreach ($allBooks as $book)
+                            @foreach ($category_result as $book)
                                 <div class="col col-xl-2 col-md-3 text-capitalize" data-toggle="popover" data-placement="top" data-content="{{ $book->book_name }}">
                                     <div class="book">
-                                        <a href="books/{{$book->slug}}">
-                                            <img src="{{ $book->book_image }}" class="img-responsive" alt="image-{{ $book->slug }}">
+                                        <a href="{{ url('books/'.$book->slug) }}">
+                                            <img src="{{ asset($book->book_image) }}" class="img-responsive" alt="image-{{ $book->slug }}">
                                         </a>
                                     </div>
                                 </div>
@@ -49,14 +49,6 @@
                     </div>
                 </div>
                 <!--end::Body-->
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="d-flex justify-content-center pb-5">
-                            {{ $allBooks->links() }}
-                        </div>
-                    </div>
-                </div>
             </div>
             <!--end::Advance Table Widget 4-->
         </div>
@@ -67,4 +59,7 @@
 {{-- Scripts Section --}}
 @section('scripts')
     <script src="{{ asset('js/pages/widgets.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/pages/custom/wizard/wizard-2.js?v=7.0.5')}} "></script>
+    <script src="{{ asset('js/pages/custom/contacts/edit-contact.js') }}"></script>
+
 @endsection

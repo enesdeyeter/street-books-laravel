@@ -64,6 +64,7 @@ class BooksController extends Controller
 
         $book->book_name = $new_title;
         $book->author_name = Str::title($request->author_name);
+        $book->author_name_slug = Str::slug($request->author_name);
         $book->description = $request->book_description;
         $book->publisher = Str::title($request->publisher);
         $book->category_id = $request->category_id;

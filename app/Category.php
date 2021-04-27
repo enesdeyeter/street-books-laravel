@@ -8,4 +8,9 @@ class Category extends Model
 {
     protected $primaryKey = "id";
     protected $table = "categories";
+
+    public function getAllCategoryBooks()
+    {
+        return $this->hasMany('App\Book','category_id','id');
+    }
 }

@@ -49,8 +49,10 @@
                                     </span>
                                     <!--end::Name-->
                                     <!--begin::Contacts-->
+
                                     <div class="d-flex flex-wrap my-2">
-                                        <span
+
+                                        <a href="{{ route('authorPage', $base_book->author_name_slug) }}"
                                             class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2"
                                             data-toggle="popover" data-placement="top" data-content="Kitap Yazarı">
                                           <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
@@ -72,32 +74,12 @@
                                               <!--end::Svg Icon-->
                                           </span>
                                             {{ $base_book->author_name }}
-                                        </span>
-                                        <span
-                                            class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2 "
-                                            data-toggle="popover" data-placement="top" data-content="Yayınevi">
-                                          <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
-                                             <!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/General/Lock.svg-->
-                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                  width="24px" height="24px" viewBox="0 0 24 24"
-                                                  version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                   <rect x="0" y="0" width="24" height="24"/>
-                                                   <path
-                                                       d="M8,4 L16,4 C17.1045695,4 18,4.8954305 18,6 L18,17.726765 C18,18.2790497 17.5522847,18.726765 17,18.726765 C16.7498083,18.726765 16.5087052,18.6329798 16.3242754,18.4639191 L12.6757246,15.1194142 C12.2934034,14.7689531 11.7065966,14.7689531 11.3242754,15.1194142 L7.67572463,18.4639191 C7.26860564,18.8371115 6.63603827,18.8096086 6.26284586,18.4024896 C6.09378519,18.2180598 6,17.9769566 6,17.726765 L6,6 C6,4.8954305 6.8954305,4 8,4 Z"
-                                                       fill="#000000"/>
-                                                </g>
-                                             </svg>
-                                              <!--end::Svg Icon-->
-                                          </span>
-                                            {{ $base_book->publisher }}
-                                        </span>
+                                        </a>
 
-                                        <span href="#"
-                                              class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2 "
-                                              data-toggle="popover" data-placement="top"
-                                              data-content="Kitap Kategorisi">
+                                        <a href="{{ route('categoryPage',$check->getCategoryName->slug) }}"
+                                           class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2 "
+                                           data-toggle="popover" data-placement="top"
+                                           data-content="Kitap Kategorisi">
                                           <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
                                              <!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Map/Marker2.svg-->
                                              <svg xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +101,27 @@
                                               <!--end::Svg Icon-->
                                           </span>
                                             {{ $check->getCategoryName->name }}
+                                        </a>
+
+                                        <span
+                                            class="text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2 "
+                                            data-toggle="popover" data-placement="top" data-content="Yayınevi">
+                                          <span class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
+                                             <!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/General/Lock.svg-->
+                                             <svg xmlns="http://www.w3.org/2000/svg"
+                                                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                  width="24px" height="24px" viewBox="0 0 24 24"
+                                                  version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                   <rect x="0" y="0" width="24" height="24"/>
+                                                   <path
+                                                       d="M8,4 L16,4 C17.1045695,4 18,4.8954305 18,6 L18,17.726765 C18,18.2790497 17.5522847,18.726765 17,18.726765 C16.7498083,18.726765 16.5087052,18.6329798 16.3242754,18.4639191 L12.6757246,15.1194142 C12.2934034,14.7689531 11.7065966,14.7689531 11.3242754,15.1194142 L7.67572463,18.4639191 C7.26860564,18.8371115 6.63603827,18.8096086 6.26284586,18.4024896 C6.09378519,18.2180598 6,17.9769566 6,17.726765 L6,6 C6,4.8954305 6.8954305,4 8,4 Z"
+                                                       fill="#000000"/>
+                                                </g>
+                                             </svg>
+                                              <!--end::Svg Icon-->
+                                          </span>
+                                            {{ $base_book->publisher }}
                                         </span>
 
                                         <span href="#" class="text-muted text-hover-primary font-weight-bold"
@@ -421,7 +424,7 @@
                   </span>
                         </div>
                         <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0" style="display: flex">
-                            <a href="" class="btn btn-light-primary font-weight-bolder mr-2 mb-2">
+                            <a href="{{ route('categoryPage',$check->getCategoryName->slug) }}" class="btn btn-light-primary font-weight-bolder mr-2 mb-2">
                                 İncele
                             </a>
                         </div>
