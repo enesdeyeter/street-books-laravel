@@ -7,7 +7,7 @@
 @endphp
 
 @if($comments->count() < 1)
-    <div class="alert alert-warning">Henüz bu kitap hakkında görüş bildiren yok.</div>
+    <div class="alert alert-warning text-dark-75">Bu kitaba ilk yorum yapan sen ol!</div>
 @endif
 
 <ul class="list-unstyled">

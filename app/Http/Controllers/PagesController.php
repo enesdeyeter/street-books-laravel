@@ -7,9 +7,50 @@ use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use function Symfony\Component\String\b;
 
 class PagesController extends Controller
 {
+    public function home()
+    {
+        $page_title = 'Anasayfa';
+        $page_description = 'Kitaplar hakkında hızlıca bilgi edinin';
+
+        $books = Book::all();
+
+        $top3Categories = DB::table('books')
+            ->select(DB::raw('categories.name,categories.slug,COUNT(*) as adet'))
+            ->leftJoin('categories','books.category_id','=','categories.id')
+            ->groupBy('category_id')
+            ->orderBy('adet','desc')
+            ->limit(3)
+            ->get();
+
+        $popularBooks = DB::table('reviews')
+            ->select(DB::raw('books.book_name,books.slug,books.book_image, COUNT(*) as adet'))
+            ->leftJoin('books','reviews.book_id','=','books.id')
+            ->groupBy('book_id')
+            ->orderBy('adet','desc')
+            ->limit(4)
+            ->get();
+
+        $bestBooks = DB::table('reviews')
+            ->select(DB::raw('books.book_name,books.slug,books.book_image, COUNT(*) as adet'))
+            ->leftJoin('books','reviews.book_id','=','books.id')
+            ->groupBy('book_id')
+            ->orderBy('adet','desc')
+            ->where('reviews.rating','=','5')
+            ->limit(6)
+            ->get();
+
+//        dd($bestBooks);
+
+        $allBooks = Book::orderBy('created_at','desc')->limit(6)->get();
+
+
+        return view('pages.home', compact('page_title', 'page_description','top3Categories','popularBooks','bestBooks','allBooks'));
+    }
+
     public function books()
     {
         $page_title = 'Kitaplar';
@@ -24,14 +65,14 @@ class PagesController extends Controller
         $page_description = 'Hızlıca profiline göz at';
 
         $comments = DB::table('users')
-            ->select('*','comments.created_at as comment_create_at')
+            ->select('*','comments.created_at as comment_create_at','comments.id as c_id')
             ->leftJoin('comments','comments.commenter_id','=','users.id')
             ->leftJoin('books','books.id','=','comments.commentable_id')
             ->where('users.id',Auth::user()->id)
             ->orderBy('comment_create_at','desc')
             ->paginate(6);
 
-        //dd($comments);
+//        dd($comments);
 
         return view('pages.user.profile', compact('page_title', 'page_description','comments'));
     }
@@ -84,13 +125,40 @@ class PagesController extends Controller
         return view('layout.partials.extras._quick_search_result', compact('search_result_book','search_result_author','search'));
     }
 
-    public function home()
-    {
-        $page_title = 'Anasayfa';
-        $page_description = 'kitaplar bla bla';
+    public function sendBookComment(){
+        $page_title = 'Yorum Yapın';
+        $page_description = 'Okumuş olduğunuz kitap hakkında yorum yapın';
 
-        return view('pages.home', compact('page_title', 'page_description'));
+        $books = Book::query()->limit(4)->orderBy('created_at','desc')->get();
+
+//        dd($books);
+
+        return view('pages.sendBookComment', compact('page_title', 'page_description','books'));
     }
+
+    public function commentableBook(Request $request){
+        $page_title = 'Yorum Yapın';
+        $page_description = 'Okumuş olduğunuz kitap hakkında yorum yapın';
+
+        $books = Book::query()->limit(4)->orderBy('created_at','desc')->get();
+
+        $foundBook = Book::query()->where('book_name','=', $request->book_name)->first();
+
+        if ($foundBook){
+            return view('pages.sendBookComment', compact('page_title', 'page_description','foundBook','books'));
+        }
+
+        else{
+            return redirect()->back()->with('error','kitap bulunamadı. lütfen sayfanın alt tarafına bakınız...');
+        }
+
+
+//        dd($foundBook);
+
+
+    }
+
+
 
     public function index()
     {
@@ -98,90 +166,5 @@ class PagesController extends Controller
         $page_description = 'Some description for the page';
 
         return view('pages.dashboard', compact('page_title', 'page_description'));
-    }
-
-    /**
-     * Demo methods below
-     */
-
-    // Datatables
-    public function datatables()
-    {
-        $page_title = 'Datatables';
-        $page_description = 'This is datatables test page';
-
-        return view('pages.datatables', compact('page_title', 'page_description'));
-    }
-
-    // KTDatatables
-    public function ktDatatables()
-    {
-        $page_title = 'KTDatatables';
-        $page_description = 'This is KTdatatables test page';
-
-        return view('pages.ktdatatables', compact('page_title', 'page_description'));
-    }
-
-    // Select2
-    public function select2()
-    {
-        $page_title = 'Select 2';
-        $page_description = 'This is Select2 test page';
-
-        return view('pages.select2', compact('page_title', 'page_description'));
-    }
-
-    // custom-icons
-    public function customIcons()
-    {
-        $page_title = 'customIcons';
-        $page_description = 'This is customIcons test page';
-
-        return view('pages.icons.custom-icons', compact('page_title', 'page_description'));
-    }
-
-    // flaticon
-    public function flaticon()
-    {
-        $page_title = 'flaticon';
-        $page_description = 'This is flaticon test page';
-
-        return view('pages.icons.flaticon', compact('page_title', 'page_description'));
-    }
-
-    // fontawesome
-    public function fontawesome()
-    {
-        $page_title = 'fontawesome';
-        $page_description = 'This is fontawesome test page';
-
-        return view('pages.icons.fontawesome', compact('page_title', 'page_description'));
-    }
-
-    // lineawesome
-    public function lineawesome()
-    {
-        $page_title = 'lineawesome';
-        $page_description = 'This is lineawesome test page';
-
-        return view('pages.icons.lineawesome', compact('page_title', 'page_description'));
-    }
-
-    // socicons
-    public function socicons()
-    {
-        $page_title = 'socicons';
-        $page_description = 'This is socicons test page';
-
-        return view('pages.icons.socicons', compact('page_title', 'page_description'));
-    }
-
-    // svg
-    public function svg()
-    {
-        $page_title = 'svg';
-        $page_description = 'This is svg test page';
-
-        return view('pages.icons.svg', compact('page_title', 'page_description'));
     }
 }

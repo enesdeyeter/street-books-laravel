@@ -21,11 +21,12 @@ class BooksController extends Controller
     public function index()
     {
         $page_title = 'Kitaplar';
-        $allBooks = Book::orderBy('created_at','desc')->paginate(18);
+        $allBooks = Book::orderBy('created_at','desc')->paginate(12);
+        $categories = Category::get();
 
         //dd($allBooks);
 
-        return view("pages.books.index", compact("page_title", "allBooks"));
+        return view("pages.books.index", compact("page_title", "allBooks","categories"));
     }
 
     /**

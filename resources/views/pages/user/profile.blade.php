@@ -18,7 +18,7 @@
                                 </p>
                             </div>
                             <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
-                                <a href="#" target="_blank"
+                                <a href="{{route('sendBookComment')}}"
                                    class="btn font-weight-bolder text-uppercase btn-success py-4 px-6">
                                     Görüş Bildir <i class="fa fa-long-arrow-alt-right pl-3"></i>
                                 </a>
@@ -190,10 +190,10 @@
                                                     <div class="mr-2">
                                                         <span
                                                            class="text-dark-75 text-hover-primary font-weight-bold">{{ $item->book_name }}</span>
-                                                        @if ($loop->first) <span
-                                                            class="label label-light-success font-weight-bolder pulse pulse-success text-uppercase label-inline ml-2">
-                                                            <span
-                                                                class="pulse-ring"></span>Yeni</span> @endif
+                                                        @if ($loop->first)
+                                                            <span class="label label-light-success font-weight-bolder pulse pulse-success text-uppercase label-inline ml-2">
+                                                            <span class="pulse-ring"></span>Yeni</span>
+                                                        @endif
                                                         <br>
                                                         <span
                                                             class="text-muted">{{\Carbon\Carbon::parse($item->comment_create_at)->diffForHumans() }}</span>
@@ -218,7 +218,7 @@
                             {{ $comments->links() }}
                         @else
                             <div class="alert alert-warning">
-                                <p>henüz hiç yorum yapmadın... </p>
+                                <span>henüz hiç yorum yapmadın... </span>
                             </div>
                         @endif
 

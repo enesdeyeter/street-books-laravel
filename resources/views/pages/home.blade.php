@@ -50,142 +50,42 @@
                         <span class="card-label font-weight-bolder text-dark">Popüler Kategoriler</span>
                         <span class="text-muted mt-3 font-weight-bold font-size-sm">Kategorilere hızlıca göz atın</span>
                     </h3>
-                    <div class="card-toolbar">
-                        <a href="#" class="btn btn-light-primary btn-sm font-weight-bolder font-size-sm">Tümünü Gör</a>
-                    </div>
                 </div>
                 <!--end::Header-->
                 <!--begin::Body-->
                 <div class="card-body pt-0">
-                    <div class="d-flex align-items-center flex-wrap mb-8">
-                        <!--begin::Symbol-->
-                        <div class="symbol symbol-50 symbol-light-success mr-5">
-                            <span class="symbol-label">
-                                <span class="svg-icon svg-icon-success svg-icon-2x">
-                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/Thunder-move.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <path d="M16.3740377,19.9389434 L22.2226499,11.1660251 C22.4524142,10.8213786 22.3592838,10.3557266 22.0146373,10.1259623 C21.8914367,10.0438285 21.7466809,10 21.5986122,10 L17,10 L17,4.47708173 C17,4.06286817 16.6642136,3.72708173 16.25,3.72708173 C15.9992351,3.72708173 15.7650616,3.85240758 15.6259623,4.06105658 L9.7773501,12.8339749 C9.54758575,13.1786214 9.64071616,13.6442734 9.98536267,13.8740377 C10.1085633,13.9561715 10.2533191,14 10.4013878,14 L15,14 L15,19.5229183 C15,19.9371318 15.3357864,20.2729183 15.75,20.2729183 C16.0007649,20.2729183 16.2349384,20.1475924 16.3740377,19.9389434 Z" fill="#000000"/><path d="M4.5,5 L9.5,5 C10.3284271,5 11,5.67157288 11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L4.5,8 C3.67157288,8 3,7.32842712 3,6.5 C3,5.67157288 3.67157288,5 4.5,5 Z M4.5,17 L9.5,17 C10.3284271,17 11,17.6715729 11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L4.5,20 C3.67157288,20 3,19.3284271 3,18.5 C3,17.6715729 3.67157288,17 4.5,17 Z M2.5,11 L6.5,11 C7.32842712,11 8,11.6715729 8,12.5 C8,13.3284271 7.32842712,14 6.5,14 L2.5,14 C1.67157288,14 1,13.3284271 1,12.5 C1,11.6715729 1.67157288,11 2.5,11 Z" fill="#000000" opacity="0.3"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                        </div>
-                        <!--end::Symbol-->
-                        <!--begin::Text-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Edebiyat</a>
-                            <span class="text-muted font-weight-bold">5234 adet kitap</span>
-                        </div>
-                        <!--end::Text-->
-                        <span class="label label-xl label-light-success label-inline my-lg-0 my-2 text-success font-weight-bolder font-size-h4 p-3"><span class="font-size-h6">#</span>1</span>
-                    </div>
+
+                    @foreach($top3Categories as $item)
 
                     <div class="d-flex align-items-center flex-wrap mb-8">
                         <!--begin::Symbol-->
-                        <div class="symbol symbol-50 symbol-light-primary mr-5">
+                        <div class="symbol symbol-50 symbol-light-primary mr-4">
                             <span class="symbol-label">
                                 <span class="svg-icon svg-icon-primary svg-icon-2x">
-                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/Thunder-move.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <path d="M16.3740377,19.9389434 L22.2226499,11.1660251 C22.4524142,10.8213786 22.3592838,10.3557266 22.0146373,10.1259623 C21.8914367,10.0438285 21.7466809,10 21.5986122,10 L17,10 L17,4.47708173 C17,4.06286817 16.6642136,3.72708173 16.25,3.72708173 C15.9992351,3.72708173 15.7650616,3.85240758 15.6259623,4.06105658 L9.7773501,12.8339749 C9.54758575,13.1786214 9.64071616,13.6442734 9.98536267,13.8740377 C10.1085633,13.9561715 10.2533191,14 10.4013878,14 L15,14 L15,19.5229183 C15,19.9371318 15.3357864,20.2729183 15.75,20.2729183 C16.0007649,20.2729183 16.2349384,20.1475924 16.3740377,19.9389434 Z" fill="#000000"/><path d="M4.5,5 L9.5,5 C10.3284271,5 11,5.67157288 11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L4.5,8 C3.67157288,8 3,7.32842712 3,6.5 C3,5.67157288 3.67157288,5 4.5,5 Z M4.5,17 L9.5,17 C10.3284271,17 11,17.6715729 11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L4.5,20 C3.67157288,20 3,19.3284271 3,18.5 C3,17.6715729 3.67157288,17 4.5,17 Z M2.5,11 L6.5,11 C7.32842712,11 8,11.6715729 8,12.5 C8,13.3284271 7.32842712,14 6.5,14 L2.5,14 C1.67157288,14 1,13.3284271 1,12.5 C1,11.6715729 1.67157288,11 2.5,11 Z" fill="#000000" opacity="0.3"/>
-                                        </g>
+																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																		<rect x="0" y="0" width="24" height="24"></rect>
+																		<path d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z" fill="#000000"></path>
+																		<rect fill="#000000" opacity="0.3" transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)" x="16.3255682" y="2.94551858" width="3" height="18" rx="1"></rect>
+																	</g>
                                     </svg>
-                                    <!--end::Svg Icon-->
                                 </span>
                             </span>
                         </div>
                         <!--end::Symbol-->
                         <!--begin::Text-->
                         <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Roman</a>
-                            <span class="text-muted font-weight-bold">5231 adet kitap</span>
+                            <span class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">{{$item->name}}</span>
+                            <a href="categories/{{$item->slug}}" class="text-muted text-hover-primary font-weight-bold">kategoriye git ></a>
                         </div>
                         <!--end::Text-->
-                        <span class="label label-xl label-light-primary label-inline my-lg-0 my-2 text-primary font-weight-bolder font-size-h4 p-3"><span class="font-size-h6">#</span>2</span>
+                        <span class="label label-xl label-light label-inline font-weight-bolder text-primary p-3">{{$item->adet}} kitap</span>
                     </div>
 
-                    <div class="d-flex align-items-center flex-wrap mb-8">
-                        <!--begin::Symbol-->
-                        <div class="symbol symbol-50 symbol-light-warning mr-5">
-                            <span class="symbol-label">
-                                <span class="svg-icon svg-icon-warning svg-icon-2x">
-                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/Thunder-move.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <path d="M16.3740377,19.9389434 L22.2226499,11.1660251 C22.4524142,10.8213786 22.3592838,10.3557266 22.0146373,10.1259623 C21.8914367,10.0438285 21.7466809,10 21.5986122,10 L17,10 L17,4.47708173 C17,4.06286817 16.6642136,3.72708173 16.25,3.72708173 C15.9992351,3.72708173 15.7650616,3.85240758 15.6259623,4.06105658 L9.7773501,12.8339749 C9.54758575,13.1786214 9.64071616,13.6442734 9.98536267,13.8740377 C10.1085633,13.9561715 10.2533191,14 10.4013878,14 L15,14 L15,19.5229183 C15,19.9371318 15.3357864,20.2729183 15.75,20.2729183 C16.0007649,20.2729183 16.2349384,20.1475924 16.3740377,19.9389434 Z" fill="#000000"/><path d="M4.5,5 L9.5,5 C10.3284271,5 11,5.67157288 11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L4.5,8 C3.67157288,8 3,7.32842712 3,6.5 C3,5.67157288 3.67157288,5 4.5,5 Z M4.5,17 L9.5,17 C10.3284271,17 11,17.6715729 11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L4.5,20 C3.67157288,20 3,19.3284271 3,18.5 C3,17.6715729 3.67157288,17 4.5,17 Z M2.5,11 L6.5,11 C7.32842712,11 8,11.6715729 8,12.5 C8,13.3284271 7.32842712,14 6.5,14 L2.5,14 C1.67157288,14 1,13.3284271 1,12.5 C1,11.6715729 1.67157288,11 2.5,11 Z" fill="#000000" opacity="0.3"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                        </div>
-                        <!--end::Symbol-->
-                        <!--begin::Text-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Felsefe</a>
-                            <span class="text-muted font-weight-bold">6325 adet kitap</span>
-                        </div>
-                        <!--end::Text-->
-                        <span class="label label-xl label-light-warning label-inline my-lg-0 my-2 text-warning font-weight-bolder font-size-h4 p-3"><span class="font-size-h6">#</span>3</span>
-                    </div>
-
-                    <div class="d-flex align-items-center flex-wrap mb-8">
-                        <!--begin::Symbol-->
-                        <div class="symbol symbol-50 symbol-light-danger mr-5">
-                            <span class="symbol-label">
-                                <span class="svg-icon svg-icon-danger svg-icon-2x">
-                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/Thunder-move.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <path d="M16.3740377,19.9389434 L22.2226499,11.1660251 C22.4524142,10.8213786 22.3592838,10.3557266 22.0146373,10.1259623 C21.8914367,10.0438285 21.7466809,10 21.5986122,10 L17,10 L17,4.47708173 C17,4.06286817 16.6642136,3.72708173 16.25,3.72708173 C15.9992351,3.72708173 15.7650616,3.85240758 15.6259623,4.06105658 L9.7773501,12.8339749 C9.54758575,13.1786214 9.64071616,13.6442734 9.98536267,13.8740377 C10.1085633,13.9561715 10.2533191,14 10.4013878,14 L15,14 L15,19.5229183 C15,19.9371318 15.3357864,20.2729183 15.75,20.2729183 C16.0007649,20.2729183 16.2349384,20.1475924 16.3740377,19.9389434 Z" fill="#000000"/><path d="M4.5,5 L9.5,5 C10.3284271,5 11,5.67157288 11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L4.5,8 C3.67157288,8 3,7.32842712 3,6.5 C3,5.67157288 3.67157288,5 4.5,5 Z M4.5,17 L9.5,17 C10.3284271,17 11,17.6715729 11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L4.5,20 C3.67157288,20 3,19.3284271 3,18.5 C3,17.6715729 3.67157288,17 4.5,17 Z M2.5,11 L6.5,11 C7.32842712,11 8,11.6715729 8,12.5 C8,13.3284271 7.32842712,14 6.5,14 L2.5,14 C1.67157288,14 1,13.3284271 1,12.5 C1,11.6715729 1.67157288,11 2.5,11 Z" fill="#000000" opacity="0.3"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                        </div>
-                        <!--end::Symbol-->
-                        <!--begin::Text-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Araştırma-Tarih</a>
-                            <span class="text-muted font-weight-bold">5614 adet kitap</span>
-                        </div>
-                        <!--end::Text-->
-                        <span class="label label-xl label-light-danger label-inline my-lg-0 my-2 text-danger font-weight-bolder font-size-h4 p-3"><span class="font-size-h6">#</span>4</span>
-                    </div>
-
-                    <div class="d-flex align-items-center flex-wrap mb-8">
-                        <!--begin::Symbol-->
-                        <div class="symbol symbol-50 symbol-light-info mr-5">
-                            <span class="symbol-label">
-                                <span class="svg-icon svg-icon-info svg-icon-2x">
-                                    <!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/Thunder-move.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <path d="M16.3740377,19.9389434 L22.2226499,11.1660251 C22.4524142,10.8213786 22.3592838,10.3557266 22.0146373,10.1259623 C21.8914367,10.0438285 21.7466809,10 21.5986122,10 L17,10 L17,4.47708173 C17,4.06286817 16.6642136,3.72708173 16.25,3.72708173 C15.9992351,3.72708173 15.7650616,3.85240758 15.6259623,4.06105658 L9.7773501,12.8339749 C9.54758575,13.1786214 9.64071616,13.6442734 9.98536267,13.8740377 C10.1085633,13.9561715 10.2533191,14 10.4013878,14 L15,14 L15,19.5229183 C15,19.9371318 15.3357864,20.2729183 15.75,20.2729183 C16.0007649,20.2729183 16.2349384,20.1475924 16.3740377,19.9389434 Z" fill="#000000"/><path d="M4.5,5 L9.5,5 C10.3284271,5 11,5.67157288 11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L4.5,8 C3.67157288,8 3,7.32842712 3,6.5 C3,5.67157288 3.67157288,5 4.5,5 Z M4.5,17 L9.5,17 C10.3284271,17 11,17.6715729 11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L4.5,20 C3.67157288,20 3,19.3284271 3,18.5 C3,17.6715729 3.67157288,17 4.5,17 Z M2.5,11 L6.5,11 C7.32842712,11 8,11.6715729 8,12.5 C8,13.3284271 7.32842712,14 6.5,14 L2.5,14 C1.67157288,14 1,13.3284271 1,12.5 C1,11.6715729 1.67157288,11 2.5,11 Z" fill="#000000" opacity="0.3"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                        </div>
-                        <!--end::Symbol-->
-                        <!--begin::Text-->
-                        <div class="d-flex flex-column flex-grow-1 mr-2">
-                            <a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Bilim-Kurgu</a>
-                            <span class="text-muted font-weight-bold">6342 adet kitap</span>
-                        </div>
-                        <!--end::Text-->
-                        <span class="label label-xl label-light-info label-inline my-lg-0 my-2 text-info font-weight-bolder font-size-h4 p-3"><span class="font-size-h6">#</span>5</span>
-                    </div>
+                    @endforeach
+                        <a href="{{route('register')}}" class="btn btn-light-primary btn-block font-size-sm mr-3">
+                            Kitapları Gör
+                        </a>
                 </div>
                 <!--end::Body-->
             </div>
@@ -198,199 +98,30 @@
                 <!--begin::Header-->
                 <div class="card-header border-0 py-5">
                     <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label font-weight-bolder text-dark">Son Yapılan Kitap Yorumları</span>
-                        <span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
+                        <span class="card-label font-weight-bolder text-dark">Popüler Kitaplar <i class="fa fa-info-circle text-hover-primary"  data-toggle="popover" data-placement="top" data-content="Yapılan tavsiye sayılarına göre"></i> </span>
+                        <span class="text-muted mt-3 font-weight-bold font-size-sm">Diğer kullanıcılar tarfından en çok tercih edilen kitaplar</span>
                     </h3>
                     <div class="card-toolbar">
-                        <a href="#" class="btn btn-info font-weight-bolder font-size-sm mr-3">New Report</a>
-                        <a href="#" class="btn btn-danger font-weight-bolder font-size-sm">Create</a>
+                        <a href="books" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
                     </div>
                 </div>
                 <!--end::Header-->
                 <!--begin::Body-->
-                <div class="card-body pt-0 pb-3">
+                <div class="card-body pt-0 pb-10" style="text-align: center;">
                     <div class="tab-content">
-                        <!--begin::Table-->
-                        <div class="table-responsive">
-                            <table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
-                                <thead>
-                                <tr class="text-left text-uppercase">
-                                    <th style="min-width: 250px" class="pl-7">
-                                        <span class="text-dark-75">products</span>
-                                    </th>
-                                    <th style="min-width: 100px">earnings</th>
-                                    <th style="min-width: 100px">comission</th>
-                                    <th style="min-width: 100px">company</th>
-                                    <th style="min-width: 130px">rating</th>
-                                    <th style="min-width: 80px"></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="pl-0 py-8">
-                                        <div class="d-flex align-items-center">
-                                            <div class="symbol symbol-50 symbol-light mr-4">
-																					<span class="symbol-label">
-																						<img
-                                                                                            src="assets/media/svg/avatars/001-boy.svg"
-                                                                                            class="h-75 align-self-end"
-                                                                                            alt=""/>
-																					</span>
-                                            </div>
-                                            <div>
-                                                <a href="#"
-                                                   class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Brad
-                                                    Simmons</a>
-                                                <span
-                                                    class="text-muted font-weight-bold d-block">HTML, JS, ReactJS</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span
-                                            class="text-dark-75 font-weight-bolder d-block font-size-lg">$8,000,000</span>
-                                        <span class="text-muted font-weight-bold">In Proccess</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
-                                    </td>
-                                    <td>
-                                        <span class="label label-lg label-light-danger label-inline">Edebiyat</span>
-                                    </td>
-                                    <td>
-                                        <img src="assets/media/logos/stars.png" alt="image" style="width: 5.5rem"/>
-                                        <span class="text-muted font-weight-bold d-block font-size-sm">Best Rated</span>
-                                    </td>
-                                    <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-light-success font-weight-bolder font-size-sm">View
-                                            Offer</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pl-0 py-0">
-                                        <div class="d-flex align-items-center">
-                                            <div class="symbol symbol-50 symbol-light mr-4">
-																					<span class="symbol-label">
-																						<img
-                                                                                            src="assets/media/svg/avatars/018-girl-9.svg"
-                                                                                            class="h-75 align-self-end"
-                                                                                            alt=""/>
-																					</span>
-                                            </div>
-                                            <div>
-                                                <a href="#"
-                                                   class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Jessie
-                                                    Clarcson</a>
-                                                <span
-                                                    class="text-muted font-weight-bold d-block">C#, ASP.NET, MS SQL</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span
-                                            class="text-dark-75 font-weight-bolder d-block font-size-lg">$23,000,000</span>
-                                        <span class="text-muted font-weight-bold">Pending</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$1,600</span>
-                                        <span class="text-muted font-weight-bold">Rejected</span>
-                                    </td>
-                                    <td>
-                                        <span class="label label-lg label-light-danger label-inline">Edebiyat</span>
-                                    </td>
-                                    <td>
-                                        <img src="assets/media/logos/stars.png" alt="image" style="width: 5.5rem"/>
-                                        <span
-                                            class="text-muted font-weight-bold d-block font-size-sm">Above Avarage</span>
-                                    </td>
-                                    <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-light-success font-weight-bolder font-size-sm">View
-                                            Offer</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pl-0 py-8">
-                                        <div class="d-flex align-items-center">
-                                            <div class="symbol symbol-50 symbol-light mr-4">
-                                                <span class="symbol-label">
-                                                    <img src="assets/media/svg/avatars/047-girl-25.svg"
-                                                         class="h-75 align-self-end" alt=""/>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <a href="#"
-                                                   class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Lebron
-                                                    Wayde</a>
-                                                <span
-                                                    class="text-muted font-weight-bold d-block">PHP, Laravel, VueJS</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span
-                                            class="text-dark-75 font-weight-bolder d-block font-size-lg">$34,000,000</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
-                                    </td>
-                                    <td>
-                                        <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
-                                    </td>
-                                    <td>
-                                        <span class="label label-lg label-light-danger label-inline">Edebiyat</span>
-                                    </td>
-                                    <td>
-                                        <img src="assets/media/logos/stars.png" alt="image" style="width: 5.5rem"/>
-                                        <span class="text-muted font-weight-bold d-block font-size-sm">Best Rated</span>
-                                    </td>
-                                    <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-light-success font-weight-bolder font-size-sm">View
-                                            Offer</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pl-0 py-0">
-                                        <div class="d-flex align-items-center">
-                                            <div class="symbol symbol-50 symbol-light mr-4">
-                                                <span class="symbol-label">
-                                                    <img src="assets/media/svg/avatars/014-girl-7.svg"
-                                                         class="h-75 align-self-end" alt=""/>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <a href="#"
-                                                   class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Natali
-                                                    Trump</a>
-                                                <span class="text-muted font-weight-bold d-block">Python, PostgreSQL, ReactJS</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-left pr-0">
-                                        <span
-                                            class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,600,000</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
-                                    </td>
-                                    <td>
-                                        <span
-                                            class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
-                                        <span class="text-muted font-weight-bold">Pending</span>
-                                    </td>
-                                    <td>
-                                        <span class="label label-lg label-light-danger label-inline">Edebiyat</span>
-                                    </td>
-                                    <td>
-                                        <img src="assets/media/logos/stars.png" style="width: 5.5rem" alt=""/>
-                                        <span class="text-muted font-weight-bold d-block font-size-sm">Avarage</span>
-                                    </td>
-                                    <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-light-success font-weight-bolder font-size-sm"
-                                           style="width: 7rem">View Offer</a>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="row">
+
+                            @foreach ($popularBooks as $book)
+                                <div class="col col-xl-3 col-md-3 text-capitalize" data-toggle="popover" data-placement="top" data-content="{{ $book->book_name }}">
+                                    <div class="book">
+                                        <a href="books/{{$book->slug}}">
+                                            <img src="{{ $book->book_image }}" class="img-responsive" alt="image-{{ $book->slug }}">
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+
                         </div>
-                        <!--end::Table-->
                     </div>
                 </div>
                 <!--end::Body-->
@@ -408,10 +139,10 @@
                 <div class="card-header border-0 py-5">
                     <h3 class="card-title align-items-start flex-column">
                         <span class="card-label font-weight-bolder text-dark">Yeni Eklenen Kitaplar</span>
-                        <span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
+                        <span class="text-muted mt-3 font-weight-bold font-size-sm">Diğer kullanıcılar tarfından eklenen son kitaplar</span>
                     </h3>
                     <div class="card-toolbar">
-                        <a href="#" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
+                        <a href="books" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
                     </div>
                 </div>
                 <!--end::Header-->
@@ -419,67 +150,16 @@
                 <div class="card-body pt-0 pb-10" style="text-align: center;">
                     <div class="tab-content">
                         <div class="row">
-                            <div class="col-md-2 gutter-b overlay">
-                                <div class="book ">
-                                    <a href=""><img src="{{asset("media/books/1.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/2.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/3.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/4.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/5.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/6.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
 
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/7.png")}}" class="img-responsive"></a>
+                            @foreach ($allBooks as $book)
+                                <div class="col col-xl-2 col-md-3 text-capitalize" data-toggle="popover" data-placement="top" data-content="{{ $book->book_name }}">
+                                    <div class="book">
+                                        <a href="books/{{$book->slug}}">
+                                            <img src="{{ $book->book_image }}" class="img-responsive" alt="image-{{ $book->slug }}">
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/8.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/9.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/10.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/11.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/12.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>
@@ -562,11 +242,11 @@
                 <!--begin::Header-->
                 <div class="card-header border-0 py-5">
                     <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label font-weight-bolder text-dark">En Çok Beğenilen Kitaplar</span>
-                        <span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
+                        <span class="card-label font-weight-bolder text-dark">En Çok Tavsiye Edilen Kitaplar <i class="fa fa-info-circle text-hover-primary"  data-toggle="popover" data-placement="top" data-content="Yapılan pozitif tavsiye sayılarına göre"></i></span>
+                        <span class="text-muted mt-3 font-weight-bold font-size-sm">Kullanıcılar tarafından en çok tavsiye edilen kitaplar</span>
                     </h3>
                     <div class="card-toolbar">
-                        <a href="#" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
+                        <a href="books" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
                     </div>
                 </div>
                 <!--end::Header-->
@@ -574,36 +254,15 @@
                 <div class="card-body pt-0 pb-10" style="text-align: center;">
                     <div class="tab-content">
                         <div class="row">
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/13.png")}}" class="img-responsive"></a>
+                            @foreach ($bestBooks as $book)
+                                <div class="col col-xl-2 col-md-3 text-capitalize" data-toggle="popover" data-placement="top" data-content="{{ $book->book_name }}">
+                                    <div class="book">
+                                        <a href="books/{{$book->slug}}">
+                                            <img src="{{ $book->book_image }}" class="img-responsive" alt="image-{{ $book->slug }}">
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/12.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/11.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/10.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/8.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-2 gutter-b">
-                                <div class="book">
-                                    <a href=""><img src="{{asset("media/books/7.png")}}" class="img-responsive"></a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

@@ -20,6 +20,66 @@
 
     <div class="row">
         <div class="col-lg-12">
+            <div class="card card-custom gutter-b">
+                <!--begin::Body-->
+                <div class="card-body d-flex align-items-center justify-content-between flex-wrap py-3">
+                    <!--begin::Info-->
+                    <div class="d-flex align-items-center mr-2 py-2">
+                        <h3 class="font-weight-bold mb-0 mr-1">Sırala</h3>
+
+                        <div class="mr-2">
+                            <div class="col-12">
+                                <select class="form-control" id="exampleSelectl">
+                                    <option>Varsayılan</option>
+                                    <option>Kitap Adı (A-Z)</option>
+                                    <option>Kitap Adı (Z-A)</option>
+                                    <option>En Yeniler</option>
+                                    <option>En Çok Yorum Yapılan</option>
+                                    <option>En Çok Tavsiye Edilen</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h3 class="text-muted font-weight-light mb-0 ml-2 mr-2">|</h3>
+
+                        <h3 class="font-weight-bold mb-0 ml-3 mr-1">Göster</h3>
+
+                        <div class="">
+                            <div class="col-12">
+                                <select class="form-control" id="exampleSelectl">
+                                    <option>12</option>
+                                    <option>15</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Info-->
+                    <!--begin::Users-->
+                    <div class="symbol-hover py-2">
+                        <div class="symbol symbol-30 symbol-light-primary">
+                                <span class="symbol-label font-weight-bold">
+                                    <i class="fas fa-th-list"></i>
+                                </span>
+                        </div>
+
+                        <div class="symbol symbol-30 symbol-light-primary">
+                                <span class="symbol-label font-weight-bold">
+                                    <i class="fas fa-th text-dark-75"></i>
+                                </span>
+                        </div>
+                    </div>
+                    <!--end::Users-->
+                </div>
+                <!--end::Body-->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
             <!--begin::Advance Table Widget 4-->
             <div class="card card-custom card-stretch gutter-b">
                 <!--begin::Header-->

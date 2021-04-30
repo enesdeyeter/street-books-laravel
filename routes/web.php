@@ -19,10 +19,13 @@ Route::get('/home', 'PagesController@home')->name('home');
 Route::get('/books', 'BooksController@index')->name('books');
 Route::get('/books/{id}', 'BooksController@show');
 
-Route::get('/category/{id}', 'PagesController@categoryPage')->name("categoryPage");
+Route::get('/categories/{id}', 'PagesController@categoryPage')->name("categoryPage");
 Route::get('/author/{id}', 'PagesController@authorPage')->name("authorPage");
 
 Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search');
+
+Route::get('/book-comment', 'PagesController@sendBookComment')->name('sendBookComment');
+Route::post('/book-comment', 'PagesController@commentableBook')->name('commentableBook');
 
 
 Route::middleware('auth')->group(function (){
