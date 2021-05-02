@@ -11,7 +11,6 @@
 
     <h1>kitap sonuç sayfası</h1>
 
-
 @endsection
 
 {{-- Scripts Section --}}

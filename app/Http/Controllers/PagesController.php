@@ -79,6 +79,9 @@ class PagesController extends Controller
 
     public function categoryPage(Request $request){
         $category = Category::query()->where('slug', $request->id)->first();
+        $categories = Category::get();
+
+//        dd($allCategories);
 
         $page_title = $category->name.' Kategorisi';
         $page_description = 'Bu kategoriye ait kitaplar';
@@ -86,7 +89,7 @@ class PagesController extends Controller
 
         if ($category!=null){
             $category_result = $category->getAllCategoryBooks;
-            return view('pages.category-page', compact('page_title', 'page_description','category_result'));
+            return view('pages.category-page', compact('page_title', 'page_description','category_result','categories'));
         }
 
         else
@@ -156,6 +159,14 @@ class PagesController extends Controller
 //        dd($foundBook);
 
 
+    }
+
+
+    public function comingSoon(){
+        $page_title = 'Hazırlanıyor';
+        $page_description = 'Bu sayfa yakında hazır olacak';
+
+        return view('pages.coming-soon',compact('page_title','page_description'));
     }
 
 

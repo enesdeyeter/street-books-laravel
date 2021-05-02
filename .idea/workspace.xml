@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a6aae6b-d280-415d-8071-1dfef8ac442b" name="Default Changelist" comment="added comment system">
-      <change afterPath="$PROJECT_DIR$/public/media/error/bg-3.jpg" afterDir="false" />
+    <list default="true" id="3a6aae6b-d280-415d-8071-1dfef8ac442b" name="Default Changelist" comment="functionality and design updates">
+      <change afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/321-3531934946558.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/321-5685400248359.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/ada-yaniyor-9266057554290.jpg" afterDir="false" />
@@ -37,6 +37,7 @@
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-8952165091853.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-9852407071670.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-9892722153986.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/modern-ev-dekorasyonu-8459316421514.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/nur-kuyumculuk-4309339096914.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/otostopcunun-galaksi-rehberi-6908520072190.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/seker-portakali-6469704432632.jpeg" afterDir="false" />
@@ -49,19 +50,24 @@
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yakisikli-bir-insan-9949586898996.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yeni-bir-foto-2999412847217.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yeni-bir-foto-9289482542914.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/categories.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/sendBookComment.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/coming-soon.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/layout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/menu_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/menu_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.bundle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/BookSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/BookSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_quick-actions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_quick-actions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/offcanvas/_quick-user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/books/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/books/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/category-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/category-page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/search-book.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/search-book.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/sendBookComment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/sendBookComment.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/user/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/comments/components/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/comments/components/comments.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +259,10 @@
       <workItem from="1619609416871" duration="645000" />
       <workItem from="1619646401433" duration="4486000" />
       <workItem from="1619724301934" duration="11547000" />
-      <workItem from="1619789965834" duration="7705000" />
+      <workItem from="1619789965834" duration="8047000" />
+      <workItem from="1619814362323" duration="6513000" />
+      <workItem from="1619821429995" duration="41000" />
+      <workItem from="1619980388215" duration="12164000" />
     </task>
     <task id="LOCAL-00001" summary="small design fixes and add track public folder">
       <created>1619136218170</created>
@@ -283,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619561494992</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="functionality and design updates">
+      <created>1619798779588</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619798779588</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +329,8 @@
     <MESSAGE value="added category and author page" />
     <MESSAGE value="added like and dislike system" />
     <MESSAGE value="added comment system" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comment system" />
+    <MESSAGE value="functionality and design updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="functionality and design updates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

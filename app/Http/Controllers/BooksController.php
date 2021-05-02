@@ -24,7 +24,7 @@ class BooksController extends Controller
         $allBooks = Book::orderBy('created_at','desc')->paginate(12);
         $categories = Category::get();
 
-        //dd($allBooks);
+//        dd($categories);
 
         return view("pages.books.index", compact("page_title", "allBooks","categories"));
     }
@@ -97,7 +97,6 @@ class BooksController extends Controller
 
         } else
             return 'lütfen kitap kapak fotoğrafını yükleyiniz';
-        die();
 
     }
 

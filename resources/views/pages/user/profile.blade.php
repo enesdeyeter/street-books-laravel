@@ -4,24 +4,37 @@
 @section('content')
     <div class="container">
         <div class="row">
+
             <div class="col-md-6">
                 <div class="card card-custom gutter-b">
                     <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between p-4 flex-lg-wrap flex-xl-nowrap">
-                            <div class="d-flex flex-column mr-5">
-                                <a href="#" class="h4 text-dark text-hover-primary mb-5">
-                                    Kitaplar Hakkında Görüş Bildirin
-                                </a>
-                                <p class="text-dark-50">
-                                    Okumuş olduğunuz kitap hakkında görüş bildirin. Bildirdiğiniz görüşler, kitabı
-                                    okumak isteyen diğer okuyucular için fikir sahibi olmalarını sağlar.
-                                </p>
-                            </div>
-                            <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
-                                <a href="{{route('sendBookComment')}}"
-                                   class="btn font-weight-bolder text-uppercase btn-success py-4 px-6">
-                                    Görüş Bildir <i class="fa fa-long-arrow-alt-right pl-3"></i>
-                                </a>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--begin::Callout-->
+                                <div class="row">
+                                    <!--begin::Content-->
+                                    <div class="col-sm-8">
+                                        <a href="#" class="h4 text-dark text-hover-primary">
+                                            Kitaplar Hakkında Görüş Bildirin
+                                        </a>
+                                        <p class="text-dark-50 line-height-lg mt-5">
+                                            Okumuş olduğunuz kitap hakkında görüş bildirin. Bildirdiğiniz görüşler,
+                                            kitabı
+                                            okumak isteyen diğer okuyucular için fikir sahibi olmalarını sağlar.
+                                        </p>
+                                    </div>
+                                    <!--end::Content-->
+                                    <!--begin::Button-->
+                                    <div class="col-sm-4 d-flex align-items-center justify-content-sm-end">
+                                        <a href="{{route('sendBookComment')}}" target="_blank"
+                                           class="btn font-weight-bolder text-uppercase font-size-lg btn-success py-3 px-6">Görüş
+                                            Bildir</a>
+
+                                    </div>
+                                    <!--end::Button-->
+                                </div>
+
+                                <!--end::Callout-->
                             </div>
                         </div>
                     </div>
@@ -30,21 +43,31 @@
             <div class="col-md-6">
                 <div class="card card-custom gutter-b">
                     <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between p-4 flex-lg-wrap flex-xl-nowrap">
-                            <div class="d-flex flex-column mr-5">
-                                <a href="#" class="h4 text-dark text-hover-primary mb-5">
-                                    Eksik Kitap Bildirin
-                                </a>
-                                <p class="text-dark-50">
-                                    Street Books'ta eksik olduğunu düşündüğünüz kitaplar varsa lütfen bize bildirin.
-                                    Bildirdiğiniz kitaplar anında sisteme eklenecektir.
-                                </p>
-                            </div>
-                            <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
-                                <a href="{{ url('book/add') }}" target="_blank"
-                                   class="btn btn-warning font-weight-bolder text-uppercase btn-success py-4 px-6">
-                                    Kitap Bildirin <i class="fa fa-long-arrow-alt-right pl-3"></i>
-                                </a>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--begin::Callout-->
+                                <div class="row">
+                                    <!--begin::Content-->
+                                    <div class="col-sm-8">
+                                        <a href="#" class="h4 text-dark text-hover-primary">
+                                            Eksik Kitap Bildirin
+                                        </a>
+                                        <p class="text-dark-50 line-height-lg mt-5">Street Books'ta eksik olduğunu
+                                            düşündüğünüz kitaplar varsa lütfen bize bildirin.
+                                            Bildirdiğiniz kitaplar anında sisteme eklenecektir.</p>
+                                    </div>
+                                    <!--end::Content-->
+                                    <!--begin::Button-->
+                                    <div class="col-sm-4 d-flex align-items-center justify-content-sm-end">
+                                        <a href="{{ url('book/add') }}" target="_blank"
+                                           class="btn font-weight-bolder text-uppercase font-size-lg btn-success py-3 px-6">Kitap
+                                            Bildirin</a>
+
+                                    </div>
+                                    <!--end::Button-->
+                                </div>
+
+                                <!--end::Callout-->
                             </div>
                         </div>
                     </div>
@@ -87,10 +110,8 @@
                                     class="symbol-label font-size-h1 text-success font-weight-bold text-uppercase">{{ substr(Auth::user()->name, 0, 1) }}</span>
                                 <i class="symbol-badge bg-success"></i>
                             </div>
-                            <h3 class="card-label">{{ Auth::user()->name }}
-                                <span class="d-block text-muted pt-2 font-size-sm"><a
-                                        href="#">{{ Auth::user()->email }}</a> </span>
-                            </h3>
+                            <h3 class="card-label"><span class="text-muted pb-2 font-size-sm text-lowercase">kullanıcı adı</span><br>
+                                {{ \Illuminate\Support\Str::slug(Auth::user()->name) }}</h3>
                         </div>
                     </div>
                     <!--end::Header-->
@@ -104,6 +125,19 @@
                             </div>
                         </div>
                         <div class="form-group row my-2">
+                            <label class="col-5 col-form-label">Ad Soyad:</label>
+                            <div class="col-7">
+                                <span
+                                    class="form-control-plaintext font-weight-bolder text-capitalize">{{ Auth::user()->name }}</span>
+                            </div>
+                        </div>
+                        <div class="form-group row my-2">
+                            <label class="col-5 col-form-label">Email:</label>
+                            <div class="col-7">
+                                <span class="form-control-plaintext font-weight-bolder">{{ Auth::user()->email }}</span>
+                            </div>
+                        </div>
+                        <div class="form-group row my-2">
                             <label class="col-5 col-form-label">Kayıt Tarihi:</label>
                             <div class="col-7">
                                 <span class="form-control-plaintext font-weight-bolder">
@@ -111,23 +145,11 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="form-group row my-2">
-                            <label class="col-5 col-form-label">Cinsiyet:</label>
-                            <div class="col-7">
-                                <span class="form-control-plaintext font-weight-bolder">Kadın</span>
-                            </div>
-                        </div>
-                        <div class="form-group row my-2">
-                            <label class="col-5 col-form-label">Şehir:</label>
-                            <div class="col-7">
-                                <span class="form-control-plaintext font-weight-bolder">Bursa</span>
-                            </div>
-                        </div>
                     </div>
                     <!--end::Body-->
                     <!--begin::Footer-->
                     <div class="card-footer">
-                        <a href="#" class="btn btn-success font-weight-bold mr-2 btn-block">Bilgileri Güncelle</a>
+                        <a href="#" class="btn btn-success font-weight-bold mr-2 btn-block disabled">Bilgileri Güncelle</a>
                     </div>
                     <!--end::Footer-->
                 </div>
@@ -167,10 +189,15 @@
                             <span class="card-label font-weight-bolder text-dark">Yaptığım Yorumlar</span>
                             <span class="text-muted mt-3 font-weight-bold font-size-sm">Kitaplar hakkında yaptığın tüm yorumlar</span>
                         </h3>
-                        <div class="card-toolbar">
-                  <span
-                      class="font-weight-bolder font-size-sm text-muted text-hover-dark">{{ $comments->count() }} yorum bulundu</span>
-                        </div>
+                        @if($comments[0]->approved == 1)
+                            <div class="card-toolbar">
+                                <span class="font-weight-bolder font-size-sm text-muted text-hover-dark">{{ $comments->count() }} yorum bulundu</span>
+                            </div>
+                        @else
+                            <div class="card-toolbar">
+                                <span class="font-weight-bolder font-size-sm text-muted text-hover-dark">0 yorum bulundu</span>
+                            </div>
+                        @endif
                     </div>
                     <!--end::Header-->
                     <!--begin::Body-->
@@ -183,15 +210,17 @@
 
                                         <div class="timeline-item ">
                                             <div class="timeline-media">
-                                                <a href="books/{{$item->slug}}"><img alt="image-book-{{$item->slug}}" src="{{ $item->book_image }}"></a>
+                                                <a href="books/{{$item->slug}}"><img alt="image-book-{{$item->slug}}"
+                                                                                     src="{{ $item->book_image }}"></a>
                                             </div>
                                             <div class="timeline-content">
                                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                                     <div class="mr-2">
                                                         <span
-                                                           class="text-dark-75 text-hover-primary font-weight-bold">{{ $item->book_name }}</span>
+                                                            class="text-dark-75 text-hover-primary font-weight-bold">{{ $item->book_name }}</span>
                                                         @if ($loop->first)
-                                                            <span class="label label-light-success font-weight-bolder pulse pulse-success text-uppercase label-inline ml-2">
+                                                            <span
+                                                                class="label label-light-success font-weight-bolder pulse pulse-success text-uppercase label-inline ml-2">
                                                             <span class="pulse-ring"></span>Yeni</span>
                                                         @endif
                                                         <br>
@@ -226,257 +255,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- en çok beğenilen kitaplar --}}
-        <div class="row">
-            <div class="col-lg-12">
-                <!--begin::Advance Table Widget 4-->
-                <div class="card card-custom card-stretch gutter-b">
-                    <!--begin::Header-->
-                    <div class="card-header border-0 py-5">
-                        <h3 class="card-title align-items-start flex-column">
-                            <span class="card-label font-weight-bolder text-dark">En Çok Beğenilen Kitaplar</span>
-                            <span
-                                class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
-                        </h3>
-                        <div class="card-toolbar">
-                            <a href="#" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
-                        </div>
-                    </div>
-                    <!--end::Header-->
-                    <!--begin::Body-->
-                    <div class="card-body pt-0 pb-10" style="text-align: center;">
-                        <div class="tab-content">
-                            <div class="row">
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/13.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/12.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/11.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/10.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/8.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/7.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end::Body-->
-                </div>
-                <!--end::Advance Table Widget 4-->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <!--begin::Advance Table Widget 4-->
-                <div class="card card-custom card-stretch gutter-b">
-                    <!--begin::Header-->
-                    <div class="card-header border-0 py-5">
-                        <h3 class="card-title align-items-start flex-column">
-                            <span class="card-label font-weight-bolder text-dark">En Çok Beğenilen Kitaplar</span>
-                            <span
-                                class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
-                        </h3>
-                        <div class="card-toolbar">
-                            <a href="#" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
-                        </div>
-                    </div>
-                    <!--end::Header-->
-                    <!--begin::Body-->
-                    <div class="card-body pt-0 pb-10" style="text-align: center;">
-                        <div class="tab-content">
-                            <div class="row">
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/13.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/12.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/11.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/10.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/8.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/7.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end::Body-->
-                </div>
-                <!--end::Advance Table Widget 4-->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <!--begin::Advance Table Widget 4-->
-                <div class="card card-custom card-stretch gutter-b">
-                    <!--begin::Header-->
-                    <div class="card-header border-0 py-5">
-                        <h3 class="card-title align-items-start flex-column">
-                            <span class="card-label font-weight-bolder text-dark">En Çok Beğenilen Kitaplar</span>
-                            <span
-                                class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
-                        </h3>
-                        <div class="card-toolbar">
-                            <a href="#" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
-                        </div>
-                    </div>
-                    <!--end::Header-->
-                    <!--begin::Body-->
-                    <div class="card-body pt-0 pb-10" style="text-align: center;">
-                        <div class="tab-content">
-                            <div class="row">
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/13.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/12.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/11.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/10.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/8.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/7.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end::Body-->
-                </div>
-                <!--end::Advance Table Widget 4-->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <!--begin::Advance Table Widget 4-->
-                <div class="card card-custom card-stretch gutter-b">
-                    <!--begin::Header-->
-                    <div class="card-header border-0 py-5">
-                        <h3 class="card-title align-items-start flex-column">
-                            <span class="card-label font-weight-bolder text-dark">En Çok Beğenilen Kitaplar</span>
-                            <span
-                                class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
-                        </h3>
-                        <div class="card-toolbar">
-                            <a href="#" class="btn btn-light-primary font-weight-bolder font-size-sm">Tümünü Gör</a>
-                        </div>
-                    </div>
-                    <!--end::Header-->
-                    <!--begin::Body-->
-                    <div class="card-body pt-0 pb-10" style="text-align: center;">
-                        <div class="tab-content">
-                            <div class="row">
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/13.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/12.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/11.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/10.png")}}"
-                                                        class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/8.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 gutter-b">
-                                    <div class="book">
-                                        <a href=""><img src="{{asset("media/books/7.png")}}" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end::Body-->
-                </div>
-                <!--end::Advance Table Widget 4-->
-            </div>
-        </div>
-        <!--end::Profile 4-->
     </div>
 @endsection
 {{-- Scripts Section --}}

@@ -27,6 +27,8 @@ Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search')
 Route::get('/book-comment', 'PagesController@sendBookComment')->name('sendBookComment');
 Route::post('/book-comment', 'PagesController@commentableBook')->name('commentableBook');
 
+Route::get('/coming-soon', 'PagesController@comingSoon')->name('coming-soon');
+
 
 Route::middleware('auth')->group(function (){
     Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

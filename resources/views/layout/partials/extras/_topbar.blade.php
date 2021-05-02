@@ -60,15 +60,16 @@
         @if (config('layout.extras.quick-actions.layout') == 'offcanvas'))
         <div class="topbar-item">
             <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_actions_toggle">
-                {{ Metronic::getSVG("media/svg/icons/Media/Equalizer.svg", "svg-icon-xl svg-icon-primary") }}
+                {{ Metronic::getSVG("media/svg/icons/Media/Rec.svg", "svg-icon-xl svg-icon-primary") }}
             </div>
         </div>
         @else
             <div class="dropdown">
                 {{-- Toggle --}}
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
-                        {{ Metronic::getSVG("media/svg/icons/Media/Equalizer.svg", "svg-icon-xl svg-icon-primary") }}
+                    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+                        {{ Metronic::getSVG("media/svg/icons/Code/Compiling.svg", "svg-icon-xl svg-icon-primary") }}
+                        <span class="pulse-ring"></span>
                     </div>
                 </div>
 

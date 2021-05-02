@@ -48,7 +48,7 @@
                                                                     <!--end::Svg Icon-->
 																</span>
 															</span>
-                                    <span class="navi-text font-weight-bolder font-size-lg">{{$item->name}}</span>
+                                    <span class="navi-text font-weight-bolder font-size-lg"> {{$item->name}}</span>
                                     @if($loop->iteration <= 3)
                                         <span class="label label-sm label-light-info label-inline text-info pulse pulse-info p-3">Popüler<span class="pulse-ring"></span></span>
                                     @endif
@@ -78,7 +78,10 @@
                     <div class="card-body d-flex align-items-center justify-content-between flex-wrap py-3">
                         <!--begin::Info-->
                         <div class="d-flex align-items-center mr-2 py-2">
-                            <h3 class="font-weight-bold mb-0 mr-1">Sırala</h3>
+                            <h3 class="font-weight-bold mb-0 mr-2">Tüm Kitaplar</h3>
+                        </div>
+                        <div class="d-flex align-items-center mr-2 py-2">
+                            <h5 class="font-weight-bold text-dark-50 mb-0 mr-1">Sırala</h5>
 
                             <div class="mr-2">
                                 <div class="col-12">
@@ -95,7 +98,7 @@
 
                             <h3 class="text-muted font-weight-light mb-0 ml-2 mr-2">|</h3>
 
-                            <h3 class="font-weight-bold mb-0 ml-3 mr-1">Göster</h3>
+                            <h5 class="font-weight-bold text-dark-50 mb-0 ml-3 mr-1">Göster</h5>
 
                             <div class="">
                                 <div class="col-12">

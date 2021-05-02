@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Faker\Factory as Faker;
 use Illuminate\Support\Str;
 
 class CategorySeeder extends Seeder
@@ -15,16 +14,69 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $date = \Illuminate\Support\Carbon::now();
-        $faker = Faker::create();
 
-        for ($i=1; $i<=20; $i++){
+        DB::table("categories")->insert([
+            [
+                'name' => 'Edebiyat',
+                'slug' => 'edebiyat',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Roman',
+                'slug' => 'roman',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Bilim - Kurgu',
+                'slug' => 'bilim-kurgu',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Çocuk ve Gençlik',
+                'slug' => 'cocuk-ve-genclik',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Sanat ve Tasarım',
+                'slug' => 'sanat-ve-tasarim',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Çizgi Roman',
+                'slug' => 'cizgi-roman',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Mizah',
+                'slug' => 'mizah',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Eğitim',
+                'slug' => 'egitim',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Kişisel Gelişim',
+                'slug' => 'kisisel-gelisim',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ],
+            [
+                'name' => 'Araştırma Tarih',
+                'slug' => 'arastirma-tarih',
+                'created_at' => $date,
+                'updated_at' => $date,
+            ]
 
-            DB::table("categories")->insert([
-                'name'=>'kategori '.$i,
-                'slug'=>'kategori-'.$i,
-                'created_at'=>$date,
-                'updated_at'=>$date
-            ]);
-        }
+        ]);
     }
 }
