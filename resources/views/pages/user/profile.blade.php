@@ -27,7 +27,7 @@
                                     <!--begin::Button-->
                                     <div class="col-sm-4 d-flex align-items-center justify-content-sm-end">
                                         <a href="{{route('sendBookComment')}}" target="_blank"
-                                           class="btn font-weight-bolder text-uppercase font-size-lg btn-success py-3 px-6">Görüş
+                                           class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Görüş
                                             Bildir</a>
 
                                     </div>
@@ -60,7 +60,7 @@
                                     <!--begin::Button-->
                                     <div class="col-sm-4 d-flex align-items-center justify-content-sm-end">
                                         <a href="{{ url('book/add') }}" target="_blank"
-                                           class="btn font-weight-bolder text-uppercase font-size-lg btn-success py-3 px-6">Kitap
+                                           class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Kitap
                                             Bildirin</a>
 
                                     </div>
@@ -246,8 +246,11 @@
 
                             {{ $comments->links() }}
                         @else
-                            <div class="alert alert-warning">
-                                <span>henüz hiç yorum yapmadın... </span>
+                            <div class="alert alert-warning" role="alert">
+                                <h4 class="alert-heading">Uyarı!</h4>
+                                <p>Maalesef sana ait hiçbir yorum bulamadık.</p>
+                                <hr>
+                                <p class="mb-0">İlk yorumunu yapmak için kitaplar sayfasına git. <a href="{{route('books')}}" class="font-weight-bold text-white text-hover-dark">kitaplara git ></a></p>
                             </div>
                         @endif
 

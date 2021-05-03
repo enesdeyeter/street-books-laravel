@@ -26,6 +26,48 @@
             <link href="{{ config('layout.self.rtl') ? asset(Metronic::rtlCssPath($theme)) : asset($theme) }}" rel="stylesheet" type="text/css"/>
         @endforeach
 
+        <style>
+            .book{
+                padding:10px 0;
+            }
+            .book img{
+                width: 168px !important;
+                height: 245px !important;
+                object-fit: cover;
+                border-radius: 6px;
+                transition: all .5s;
+            }
+            .book a:hover img{
+                border-radius: 0px;
+                transition: all 0.3s ease;
+            }
+            .single-comment{
+                background-color: #fff;
+                margin: 10px 0;
+                padding: 20px;
+                border-radius: 4px;
+            }
+             .timeline.timeline-3 .timeline-items .timeline-item .timeline-media {
+                 position: absolute;
+                 top: 24px;
+                 left: -26px;
+                 border: 2px solid #EBEDF3;
+                 /*border-radius: 100%;*/
+                 width: 50px;
+                 height: 50px;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 background-color: #ffffff;
+                 line-height: 0;
+             }
+            .timeline.timeline-3 .timeline-items .timeline-item .timeline-media img {
+                max-width: 62px !important;
+                max-height: none !important;
+                border-radius: 4px;
+            }
+        </style>
+
         {{-- Includable CSS --}}
         @yield('styles')
     </head>

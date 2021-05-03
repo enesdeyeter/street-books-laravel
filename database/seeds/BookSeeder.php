@@ -20,19 +20,20 @@ class BookSeeder extends Seeder
 
         for ($i = 0; $i < 20; $i++) {
             $s = $faker->catchPhrase;
+            $a_name = $faker->name;
 
             DB::table("books")->insert([
                 'category_id' => $faker->numberBetween(1, 10),
                 'book_name' => $s,
                 'book_image' => 'https://picsum.photos/seed/' . $faker->numberBetween(1, 50) . '/320/490',
                 'description' => $faker->paragraph(20, false),
-                'author_name' => $faker->name,
+                'author_name' => $a_name,
                 'publisher' => $faker->company,
                 'pages' => $faker->numberBetween(95, 999),
-                'like' => $faker->numberBetween(8, 99),
-                'dislike' => $faker->numberBetween(5, 25),
                 'isbn' => $faker->isbn13,
                 'slug' => Str::slug($s, '-'),
+                'user_id' => 1,
+                'author_name_slug' => Str::slug($a_name, '-'),
                 'created_at' => $date,
                 'updated_at' => $date
             ]);
