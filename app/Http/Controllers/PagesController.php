@@ -145,13 +145,14 @@ class PagesController extends Controller
 
         $books = Book::query()->limit(4)->orderBy('created_at','desc')->get();
 
-        $foundBook = Book::query()->where('book_name','=', $request->book_name)->first();
+        $foundBook = Book::query()->where('book_name','like', '%'.$request->book_name.'%')->first();
 
         if ($foundBook){
             return view('pages.sendBookComment', compact('page_title', 'page_description','foundBook','books'));
         }
 
         else{
+            $hata = 'hata var mk';
             return redirect()->back()->with('error','kitap bulunamadı. lütfen sayfanın alt tarafına bakınız...');
         }
 
@@ -167,6 +168,12 @@ class PagesController extends Controller
         $page_description = 'Bu sayfa yakında hazır olacak';
 
         return view('pages.coming-soon',compact('page_title','page_description'));
+    }
+
+    public function faq(){
+        $page_title = 'Sıkça Sorulan Sorular';
+
+        return view('pages.faq',compact('page_title'));
     }
 
 

@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="form-group">
-                                                <label for="message">Görüşünüzü yazınız:</label>
+                                                <label for="message">Yorumunuzu yazınız:</label>
                                                 <textarea required class="form-control" name="message" rows="3">{{ $comment->comment }}</textarea>
                                                 <small class="form-text text-muted">kısayollar için <a target="_blank" href="https://help.github.com/articles/basic-writing-and-formatting-syntax">Markdown</a></small>
                                             </div>
@@ -68,14 +68,14 @@
                                     <form method="POST" action="{{ route('comments.reply', $comment->getKey()) }}">
                                         @csrf
                                         <div class="modal-header">
-                                            <h5 class="modal-title">Görüşü Cevapla</h5>
+                                            <h5 class="modal-title">Yorumu Cevapla</h5>
                                             <button type="button" class="close" data-dismiss="modal">
                                                 <span>&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
                                             <div class="form-group">
-                                                <label for="message">Kitap hakkındaki görüşünüzü buraya giriniz:</label>
+                                                <label for="message">Kitap hakkındaki yorumunuzu buraya giriniz:</label>
                                                 <textarea required class="form-control" name="message" rows="5"></textarea>
                                                 <small class="form-text text-muted">kısayollar için <a target="_blank" href="https://help.github.com/articles/basic-writing-and-formatting-syntax">Markdown</a></small>
                                             </div>

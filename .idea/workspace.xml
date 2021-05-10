@@ -4,15 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a6aae6b-d280-415d-8071-1dfef8ac442b" name="Default Changelist" comment="preparation of the final version">
-      <change afterPath="$PROJECT_DIR$/public/media/logos/street-books-logo-dark.png" afterDir="false" />
+    <list default="true" id="3a6aae6b-d280-415d-8071-1dfef8ac442b" name="Default Changelist" comment="preparation of the final version v2">
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/1984-8423194782074.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/321-3531934946558.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/321-5685400248359.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/ada-yaniyor-9266057554290.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/das-347744268528.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/das-5536787684791.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/das-5565570651351.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/das-7760231805853.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/das-7890689968080.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/das-9992742706086.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dijital-tapinak-6419605536582.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dsa-2739155419515.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dsads-5023029118321.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/dsads-5529380080071.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/el-yapimi-ruhlar-3533084892451.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/fasf-5511333786655.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/jsjs-9341352465255.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/kdaso-4217845887979.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/kendine-yabancilasan-insan-1554904217625.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/kendine-yabancilasan-insan-3012469151529.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-1066452856673.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-3327333337314.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-3509839379001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-3670998673733.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-3735313291538.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-3880319033694.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-3941976746517.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-6070723378132.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-6804069679605.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-721670086832.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-7844875151219.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-8188479118137.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-8938316064392.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-8952165091853.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-9852407071670.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/konforunu-duskun-insanlar-9892722153986.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/marsli-7440468863323.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/modern-ev-dekorasyonu-8459316421514.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/nur-kuyumculuk-4309339096914.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/otostopcunun-galaksi-rehberi-6908520072190.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/sarman-kediler-ne-ister-7822278723038.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/seker-portakali-6469704432632.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/serenad-7723662619350.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/serenad-resize-try-6964287095221.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/serenad-resize-try-8618196173859.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/serenad-resize-try-9398334575536.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/serenad-resize-try-9763217782491.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/tekvin-7244757379985.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/tutunamayanlar-8056097923804.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/uzun-yasamanin-tuyolari-8018202315093.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yakisikli-bir-insan-6151269760984.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yakisikli-bir-insan-9949586898996.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yeni-bir-foto-2999412847217.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yeni-bir-foto-9289482542914.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/book_image/yorunge-7699587269546.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/faq.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/logos/logo-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header-mobile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/base/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/menu_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/menu_header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/_topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_quick-actions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/extras/dropdown/_quick-actions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/partials/subheader/_subheader-v1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/partials/subheader/_subheader-v1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/books/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/books/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/category-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/category-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/comments/_comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/comments/_comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/comments/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/comments/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
+    <list id="9c5b40cb-8635-471a-9836-2cc9db157342" name="preparation of the final version v2" comment="preparation of the final version v2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,6 +244,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3a6aae6b-d280-415d-8071-1dfef8ac442b" name="Default Changelist" comment="" />
+      <changelist id="9c5b40cb-8635-471a-9836-2cc9db157342" name="preparation of the final version v2" comment="" />
       <created>1598433806553</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -206,7 +269,11 @@
       <workItem from="1619814362323" duration="6513000" />
       <workItem from="1619821429995" duration="41000" />
       <workItem from="1619980388215" duration="12310000" />
-      <workItem from="1619997754703" duration="4398000" />
+      <workItem from="1619997754703" duration="5149000" />
+      <workItem from="1620318284650" duration="14271000" />
+      <workItem from="1620482806498" duration="1665000" />
+      <workItem from="1620602094629" duration="797000" />
+      <workItem from="1620643705393" duration="1677000" />
     </task>
     <task id="LOCAL-00001" summary="small design fixes and add track public folder">
       <created>1619136218170</created>
@@ -257,7 +324,28 @@
       <option name="project" value="LOCAL" />
       <updated>1620003959095</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="preparation of the final version v2">
+      <created>1620005474344</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620005474345</updated>
+    </task>
+    <task id="LOCAL-00009" summary="preparation of the final version v2">
+      <created>1620005524932</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620005524932</updated>
+    </task>
+    <task id="LOCAL-00010" summary="preparation of the final version v2">
+      <created>1620005640969</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620005640969</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +378,8 @@
     <MESSAGE value="functionality and design updates" />
     <MESSAGE value="design improvement and minor errors fixed" />
     <MESSAGE value="preparation of the final version" />
-    <option name="LAST_COMMIT_MESSAGE" value="preparation of the final version" />
+    <MESSAGE value="preparation of the final version v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparation of the final version v2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

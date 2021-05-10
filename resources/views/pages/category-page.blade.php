@@ -134,7 +134,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="navi navi-hover navi-active navi-link-rounded navi-bold navi-icon-center navi-light-icon">
+                        <div
+                            class="navi navi-hover navi-active navi-link-rounded navi-bold navi-icon-center navi-light-icon">
                             {{-- mobil--}}
                             @foreach($categories as $item)
                                 <div class="navi-item my-2">
@@ -185,39 +186,34 @@
                 </div>
 
             @if($category_result->count() > 0)
-                <!--kitaplar-->
-                <div class="row">
-
+                    <div class="row">
                         @foreach ($category_result as $item)
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                                <!--begin::Card-->
                                 <div class="card card-custom gutter-b card-stretch text-center">
                                     <div class="card-body">
                                         <div class="d-flex flex-column align-items-center" style="margin-top: -10px">
-
                                             <div class="book">
                                                 <a href="{{url('books/'.$item->slug)}}">
                                                     <img src="{{ asset($item->book_image) }}" class="img-responsive"
                                                          alt="image-{{ $item->slug }}">
                                                 </a>
                                             </div>
-
                                             <a href="{{url('books/'.$item->slug)}}"
                                                class="text-dark-75 font-weight-bold mt-5 text-hover-primary font-size-lg">{{$item->book_name}}</a>
                                         </div>
                                     </div>
                                 </div>
-                                <!--end:: Card-->
                             </div>
                         @endforeach
-
-                </div>
+                    </div>
                 @else
                     <div class="alert alert-warning" role="alert">
                         <h4 class="alert-heading">Uyarı!</h4>
                         <p>{{$page_title}}'ne ait kitap bulunamdı...</p>
                         <hr>
-                        <p class="mb-0">Bir sorun olduğunu düşünüyorsanız lütfen bize bildirin. <a href="" class="font-weight-bold text-white text-hover-dark">iletişime geç ></a></p>
+                        <p class="mb-0">Bir sorun olduğunu düşünüyorsanız lütfen bize bildirin
+                            <a href="" class="font-weight-bold text-white text-hover-dark">iletişime geç ></a>
+                        </p>
                     </div>
                 @endif
             </div>

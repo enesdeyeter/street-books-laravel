@@ -39,7 +39,7 @@
             @endif
 
             <div class="form-group">
-                <label for="message">Kitap hakkındaki görüşünüzü buraya yazınız:</label>
+                <label for="message">Kitap hakkındaki yorumunuzu buraya yazınız:</label>
                 <textarea class="form-control @if($errors->has('message')) is-invalid @endif" name="message" rows="5"></textarea>
                 <div class="invalid-feedback">
                     Mesaj alanı boş bırakılamaz.

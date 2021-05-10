@@ -55,6 +55,12 @@
         @endif
     @endif
 
+    <div class="topbar-item">
+        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" data-toggle="popover" data-placement="bottom" data-content="Hızlı yorum yap" id="kt_quick_actions_toggle">
+            <a href="{{ route('commentableBook') }}">{{ Metronic::getSVG("media/svg/icons/Home/Book-open.svg", "svg-icon-xl svg-icon-primary") }}</a>
+        </div>
+    </div>
+
     {{-- Quick Actions --}}
     @if (config('layout.extras.quick-actions.display'))
         @if (config('layout.extras.quick-actions.layout') == 'offcanvas'))
@@ -67,8 +73,8 @@
             <div class="dropdown">
                 {{-- Toggle --}}
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
-                        {{ Metronic::getSVG("media/svg/icons/Code/Compiling.svg", "svg-icon-xl svg-icon-primary") }}
+                    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary" data-toggle="popover" data-placement="bottom" data-content="Kısayollar">
+                        {{ Metronic::getSVG("media/svg/icons/General/Thunder.svg", "svg-icon-xl svg-icon-primary") }}
                         <span class="pulse-ring"></span>
                     </div>
                 </div>

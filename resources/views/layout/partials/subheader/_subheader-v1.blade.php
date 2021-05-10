@@ -42,7 +42,7 @@
 
             <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Eylemler " data-placement="left">
                 <a href="#" class="btn btn-icon"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ Metronic::getSVG("media/svg/icons/General/Settings-1.svg", "svg-icon-success svg-icon-2x") }}
+                    {{ Metronic::getSVG("media/svg/icons/General/Thunder-move.svg", "svg-icon-success svg-icon-2x") }}
                 </a>
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
                     {{-- Navigation --}}

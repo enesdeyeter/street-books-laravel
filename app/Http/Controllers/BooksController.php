@@ -24,8 +24,6 @@ class BooksController extends Controller
         $allBooks = Book::orderBy('created_at','desc')->paginate(12);
         $categories = Category::get();
 
-//        dd($categories);
-
         return view("pages.books.index", compact("page_title", "allBooks","categories"));
     }
 
@@ -130,18 +128,20 @@ class BooksController extends Controller
             return back()->with('error','daha önce bu kitap için tercihte bulundunuz!');
         }
 
-        $user = Auth::user();
-        $post = Book::where('id', $request->book_id)->first();
+        else{
+            $user = Auth::user();
+            $post = Book::where('id', $request->book_id)->first();
 
-        $rating = $post->rating([
-            'book_id' => $post->id,
-            'book_name' => $post->book_name,
-            'rating' => 1,
-            'recommend' => 'Yes',
-            'approved' => true, // This is optional and defaults to false
-        ], $user);
+            $rating = $post->rating([
+                'book_id' => $post->id,
+                'book_name' => $post->book_name,
+                'rating' => 1,
+                'recommend' => 'Yes',
+                'approved' => true, // This is optional and defaults to false
+            ], $user);
 
-        return back()->with('success','teşekkürler! bu kitap için bir tavsiyede bulundunuz.');
+            return back()->with('success','teşekkürler! bu kitap için bir tavsiyede bulundunuz.');
+        }
     }
 
     /**

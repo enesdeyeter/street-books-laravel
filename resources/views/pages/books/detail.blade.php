@@ -404,7 +404,7 @@
                         @else
                             <div class="ml-6 ml-lg-0 ml-xxl-6 ">
                                 <p class="font-size-h6 mb-0">Giriş yapmanız gerekiyor.<u><a href="{{route('login')}}" class="font-weight-boldest">Giriş Yap</a></u></p>
-                                <p class="font-size-lg text-muted">Kitap hakkında görüş bildirmek için giriş yapmalısınız.</p>
+                                <p class="font-size-lg text-muted">Kitap hakkında yorum yapabilmek için giriş yapmalısınız.</p>
                             </div>
                         @endif
                     </div>
@@ -433,7 +433,7 @@
     <hr>
     <div class="row" id="comment">
         <div class="col-md-12">
-            <h3 class="display-4 font-weight-bold mt-5 mb-5 text-center">Diğer okuyucuların görüşleri</h3>
+            <h3 class="display-4 font-weight-bold mt-5 mb-5 text-center">Diğer okuyucuların yorumları</h3>
             @comments(['model' => App\Book::find($base_book->id)])
         </div>
     </div>
